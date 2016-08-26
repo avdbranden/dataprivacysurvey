@@ -1,0 +1,60 @@
+<!--- Title Start -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Survey</h1>
+    </div>
+  </div>
+</div>
+
+<!--- Title End -->
+
+<!--- Survey Start -->
+
+<div id="survey">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-md-offset-3">
+
+        <%= simple_form_for @survey do |f| %> <!--- Simple form start-->
+
+          <!--- Survey/preliminary questions start-->
+
+            <div id="preliminary-questions">
+              <h4>How many employees work in your organization?</h4>
+              <%= f.input :locality, label: false %>
+
+              <h4>In which sector is your organization evolving?</h4>
+              <%= f.input :number_of_employees, collection: Survey::SIZES, label: false %>
+
+              <h4>In which countries/regions is your organization present?</h4>
+              <%= f.input :sector, collection: Survey::SECTORS, label: false %>
+
+              <h4>Are you processing data at a large scale?</h4>
+              <%= f.input :data_processor, as: :radio_buttons, label: false%>
+
+            </div> <!--- #preliminary-questions -->
+
+            <!--- Survey/preliminary questions end -->
+
+            <!--- Survey/ bulk questions start -->
+
+            <div id="bulk-questions">
+
+            </div> <!--- #bulk-questions -->
+
+          <!--- Survey/ bulk questions end -->
+
+            <%= f.submit %>
+
+         <% end %> <!--- Simple form start-->
+
+      </div> <!--- .col-xs-12 col-md-8 col-md-offset-2 -->
+    </div> <!--- .row -->
+  </div> <!--- .container-->
+</div> <!--- #survey -->
+
+<!--- Survey End-->
+
+<!--- Survey/ bulk questions -->
