@@ -1,0 +1,57 @@
+#survey-title {
+  h1 {
+    font-weight: 800;
+    color: white;
+    padding: 30px;
+    border: 2px solid;
+    border-radius: $border-radius-large;
+    letter-spacing: 2px;
+  }
+}
+
+#survey {
+  h4 {
+    font-weight: 500;
+  }
+}
+
+.panel {
+  margin-top: 80px;
+  span.number-halo {
+    border-bottom: 2px solid #604e79;
+    margin-right: 10px;
+    letter-spacing: 6px;
+  }
+  .panel-heading {
+    background-color: $purple;
+    color: white;
+    padding: 25px;
+    h2 {
+      text-align: center;
+      font-size: 30px;
+    }
+  }
+  .panel-body {
+    background-color: $bg-gray;
+    #preliminary-questions-explanation {
+      padding: 10px;
+      margin-bottom: 10px;
+      font-weight: 300;
+      font-size: 18px;
+    }
+    h4.preliminary-questions {
+      border-top: 2px solid white;
+      padding-top: 20px;
+    }
+    p {
+      font-weight: 300;
+    }
+    .question {
+      border-top: 2px solid white;
+      padding-top: 5px
+    }
+    .indent {
+      margin-left: 30px;
+    }
+  }
+}

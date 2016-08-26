@@ -1,9 +1,12 @@
 class SurveysController < ApplicationController
   def new
     @survey = Survey.new
+    @survey.answers.build # Required to enable nested attributes
   end
 
   def create
+    @survey = Survey.new(survey_params)
+    raise
   end
 
   def show
@@ -15,9 +18,10 @@ class SurveysController < ApplicationController
     params.require(:survey).permit(
       :locality, :number_of_employees, :sector, :data_processor,
       answers_attributes: [
-        :survey_id, :question_number, :question_text, :answer_text,
-        :compliant, :weighting_directive, :regulation_directive,
-        :explanation_text]
-        )
+        :question_number, :question_text, :answer_text,
+        :compliant, :weighting_directive, :weighting_regulation,
+        :explanation_text
+        ]
+      )
   end
 end

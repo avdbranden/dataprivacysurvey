@@ -6,4 +6,5 @@ class Survey < ActiveRecord::Base
     "Analytics", "Bio & Food"].sort_by { |word| word.downcase }
 
   has_many :answers
+  accepts_nested_attributes_for :answers
 end

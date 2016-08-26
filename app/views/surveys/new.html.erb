@@ -1,9 +1,11 @@
 <!--- Title Start -->
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <h1>Survey</h1>
+<div id="survey-title">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-1">
+        <h1>Data Privacy Compliance Survey</h1>
+      </div>
     </div>
   </div>
 </div>
@@ -19,36 +21,87 @@
 
         <%= simple_form_for @survey do |f| %> <!--- Simple form start-->
 
-          <!--- Survey/preliminary questions start-->
+          <!--- Survey/preliminary questions start -->
 
             <div id="preliminary-questions">
-              <h4>How many employees work in your organization?</h4>
-              <%= f.input :locality, label: false %>
+              <div class="panel panel-default">
 
-              <h4>In which sector is your organization evolving?</h4>
-              <%= f.input :number_of_employees, collection: Survey::SIZES, label: false %>
+                <div class="panel-heading">
+                  <h2 class="panel-title">Preliminary questions</h2>
+                </div> <!--- .panel-heading -->
 
-              <h4>In which countries/regions is your organization present?</h4>
-              <%= f.input :sector, collection: Survey::SECTORS, label: false %>
+                <div class="panel-body">
+                  <div id="preliminary-questions-explanation">
+                    <p>Be reassured, the survey (and associated compliance level analysis) is completely <strong>anonymous</strong>. However, the below information will give us a very useful insight about the data privacy landscape</p>
+                  </div> <!--- #preliminary-questions-explanation" -->
 
-              <h4>Are you processing data at a large scale?</h4>
-              <%= f.input :data_processor, as: :radio_buttons, label: false%>
+                  <h4 class="preliminary-questions">How many employees work in your organization?</h4>
+                  <%= f.input :locality, collection: Survey::SIZES, label: false %>
+
+                  <h4 class="preliminary-questions">In which sector is your organization evolving?</h4>
+                  <%= f.input :number_of_employees, collection: Survey::SECTORS, label: false %>
+
+                  <h4 class="preliminary-questions">In which countries/regions is your organization present?</h4>
+                  <%= f.input :sector, label: false %>
+
+                  <h4 class="preliminary-questions">Are you processing data at a large scale?</h4>
+                  <p>Using analytics or tracking tools for example</p>
+                  <%= f.input :data_processor, as: :radio_buttons, label: false, item_label_class: "radio-inline", item_wrapper_tag: false %>
+                </div> <!--- .panel-body -->
+              </div> <!--- .panel -->
 
             </div> <!--- #preliminary-questions -->
 
-            <!--- Survey/preliminary questions end -->
+          <!--- Survey/preliminary questions end -->
+          <!--- ### -->
 
-            <!--- Survey/ bulk questions start -->
+          <!--- ### -->
+          <!--- Survey/ bulk questions start -->
 
             <div id="bulk-questions">
+
+              <%= f.simple_fields_for :answers do |a| %> <!--- Simple fields start-->
+
+              <!--- Survey/Information start -->
+              <!--- ### -->
+
+              <div class="panel panel-default">
+
+                <div class="panel-heading">
+                  <h2 class="panel-title">
+                    Information
+                  </h2>
+                </div> <!--- .panel-heading -->
+
+                <div class="panel-body">
+
+                  <h4><span class="number-halo">1</span>Are you informing the data subject of:</h4>
+
+                  <%= render partial: "question", locals: { a: a, counter: 1,question_number: "1a", question_text: "your identity as data controller?", hint: "e.g. the name of your organization and its postal address", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+
+                  <%= render partial: "question", locals: { a: a, counter: 2, question_number: "1b", question_text: "the purposes of processing?", hint: "e.g. your organization may process personal data for the purposes of fraud prevention or better customer support", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+
+                  <%= render partial: "question", locals: { a: a, counter: 3, question_number: "1c", question_text: "the recipients or categories of recipients of personal data?", hint: "e.g. personnel in your IT department may have access to (parts) of personal data", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+
+                  <%= render partial: "question", locals: { a: a, counter: 4, question_number: "1d", question_text: "Whether the personal data processed is mandatory for the processing purposes (and the consequences of not providing the data)?", hint: "e.g. without the disclosing of a client's postal address, the company is unable to ship a product, but the birth date is just to send you some special discount on your birthday", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+
+                </div> <!--- .panel-body -->
+
+              </div> <!--- .panel -->
+
+              <!--- ### -->
+              <!--- Survey/Information end -->
+
+              <% end %> <!--- Simple fields end-->
 
             </div> <!--- #bulk-questions -->
 
           <!--- Survey/ bulk questions end -->
+          <!--- ### -->
 
             <%= f.submit %>
 
-         <% end %> <!--- Simple form start-->
+         <% end %> <!--- Simple form end-->
 
       </div> <!--- .col-xs-12 col-md-8 col-md-offset-2 -->
     </div> <!--- .row -->
