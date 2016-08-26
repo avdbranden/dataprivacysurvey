@@ -48,10 +48,25 @@
     }
     .question {
       border-top: 2px solid white;
-      padding-top: 5px
+      padding-top: 5px;
+      .survey_answers_answer_text {
+        margin-right: 50px;
+      }
+      .hidden {
+        display: none;
+      }
     }
     .indent {
       margin-left: 30px;
+      margin-right: 30px;
+    }
+    .indentmore {
+      border-top: none;
+      padding-top: none;
+      margin-left: 50px;
+      border-left: 2px solid white;
+      padding-left: 20px;
+      margin-right: 30px;
     }
   }
 }

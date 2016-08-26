@@ -65,31 +65,70 @@
               <!--- Survey/Information start -->
               <!--- ### -->
 
-              <div class="panel panel-default">
+                <div class="panel panel-default">
 
-                <div class="panel-heading">
-                  <h2 class="panel-title">
-                    Information
-                  </h2>
-                </div> <!--- .panel-heading -->
+                  <div class="panel-heading">
+                    <h2 class="panel-title">
+                      Information
+                    </h2>
+                  </div> <!--- .panel-heading -->
 
-                <div class="panel-body">
+                  <div class="panel-body">
 
-                  <h4><span class="number-halo">1</span>Are you informing the data subject of:</h4>
+                    <h4><span class="number-halo">1</span>Are you informing the data subject of:</h4>
 
-                  <% counter = 0 %>
+                    <% counter = 0 %> <!--- initializing a counter -->
 
-                  <%= render partial: "question", locals: { a: a, counter: counter += 1 ,question_number: "1a", question_text: "your identity as data controller?", hint: "e.g. the name of your organization and its postal address", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question", locals: { a: a, counter: counter += 1 ,question_number: "1a", question_text: "your identity as data controller?", hint: "e.g. the name of your organization and its postal address", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
-                  <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1b", question_text: "the purposes of processing?", hint: "e.g. your organization may process personal data for the purposes of fraud prevention or better customer support", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1b", question_text: "the purposes of processing?", hint: "e.g. your organization may process personal data for the purposes of fraud prevention or better customer support", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
-                  <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1c", question_text: "the recipients or categories of recipients of personal data?", hint: "e.g. personnel in your IT department may have access to (parts) of personal data", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1c", question_text: "the recipients or categories of recipients of personal data?", hint: "e.g. personnel in your IT department may have access to (parts) of personal data", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
-                  <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1d", question_text: "Whether the personal data processed is mandatory for the processing purposes (and the consequences of not providing the data)?", hint: "e.g. without the disclosing of a client's postal address, the company is unable to ship a product, but the birth date is just to send you some special discount on your birthday", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1d", question_text: "Whether the personal data processed is mandatory for the processing purposes (and the consequences of not providing the data)?", hint: "e.g. without the disclosing of a client's postal address, the company is unable to ship a product, but the birth date is just to send you some special discount on your birthday", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
-                </div> <!--- .panel-body -->
+                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1e", question_text: "the existence of the data subject’s rights to access and rectify its personal data?", hint: nil, questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
-              </div> <!--- .panel -->
+                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1f", question_text: "the duration for which the personal data is stored and processed?", hint: nil, questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+
+                    <!--- if yes, precise time duration -->
+
+                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1f1", question_text: "Hence, what is the average time limit?", hint: "Maximum 1 year, 3 years on average, ...", questionstyle: "indentmore", weighting_directive: 1, weighting_regulation: 1, answer_text: "yes", explanation_text: nil } %>
+
+                    <!--- if not, means no time limits, right? -->
+
+                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1f2", question_text: "Hence, is there a time limit to processing data", hint: nil, questionstyle: "indentmore", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+
+                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1g", question_text: "the existence of the right of erasure of personal data?", hint: nil, questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+
+                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1h", question_text: "the right to lodge a complaint with your national supervisory authority?", hint: "In Belgium, this would be the Privacy Commission", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+
+                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1i", question_text: "the legal basis for data processing?", hint: "e.g. a contractual obligation, the data subject's consent, etc.", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+
+                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1j", question_text: "the contact details of the data privacy officer of your organization", hint: "No data privacy?", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+
+                  </div> <!--- .panel-body -->
+
+                </div> <!--- .panel -->
+
+              <!--- ### -->
+              <!--- Survey/Information end -->
+
+              <!--- Survey/Information start -->
+              <!--- ### -->
+
+                <div class="panel panel-default">
+
+                  <div class="panel-heading">
+                    <h2 class="panel-title">
+                      Reasons for processing
+                    </h2>
+                  </div> <!--- .panel-heading -->
+
+                  <div class="panel-body">
+                  </div> <!--- .panel-body -->
+
+                </div> <!--- .panel -->
 
               <!--- ### -->
               <!--- Survey/Information end -->

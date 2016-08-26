@@ -1,10 +1,13 @@
-<div class="question <%= questionstyle %>">
+<div class="question <%= questionstyle%>">
   <h4><span class="number-halo"><%= question_number.split("").pop %></span><%= question_text %></h4>
+  <% if answer_text == "yes" %>
+    <%= a.input :answer_text, label: false, placeholder: hint, input_html: { name: "survey[answers_attributes][#{counter}][answer_text]", id: question_number + "answer_text", class: "question_input" } %>
+  <% else %>
   <p><%= hint %></p>
-  <%= a.input :compliant, as: :radio_buttons, label: false, collection: [[true, "Yes"], [false, "No / Don't know"]], label_method: :last, value_method: :first, item_label_class: "radio-inline", item_wrapper_tag: false, input_html: { name: "survey[answers_attributes][#{counter}][compliant]", id: question_number + "compliant" } %>
+    <%= a.input :compliant, as: :radio_buttons, label: false, collection: [[true, "Yes"], [false, "No / Don't know"]], label_method: :last, value_method: :first, item_label_class: "radio-inline", item_wrapper_tag: false, input_html: { name: "survey[answers_attributes][#{counter}][compliant]", id: question_number + "compliant", class: "question_input" } %>
+  <% end %>
   <%= a.hidden_field :question_number, value: question_number, name: "survey[answers_attributes][#{counter}][question_number]", id: question_number + "question_number" %>
   <%= a.hidden_field :question_text, value: question_text, name: "survey[answers_attributes][#{counter}][question_text]", id: question_number + "text" %>
-  <%= a.hidden_field :answer_text, value: answer_text, name: "survey[answers_attributes][#{counter}][answer_text]", id: question_number + "answer" %>
   <%= a.hidden_field :weighting_directive, value: weighting_directive, name: "survey[answers_attributes][#{counter}][weighting_directive]", id: question_number + "weighting_directive" %>
   <%= a.hidden_field :weighting_regulation, value: weighting_regulation, name: "survey[answers_attributes][#{counter}][weighting_regulation]", id: question_number + "weighting_regulation" %>
   <%= a.hidden_field :explanation_text, value: explanation_text, name: "survey[answers_attributes][#{counter}][explanation_text]", id: question_number + "explanation_text" %>
