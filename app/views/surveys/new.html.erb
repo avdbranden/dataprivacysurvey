@@ -77,13 +77,15 @@
 
                   <h4><span class="number-halo">1</span>Are you informing the data subject of:</h4>
 
-                  <%= render partial: "question", locals: { a: a, counter: 1,question_number: "1a", question_text: "your identity as data controller?", hint: "e.g. the name of your organization and its postal address", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                  <% counter = 0 %>
 
-                  <%= render partial: "question", locals: { a: a, counter: 2, question_number: "1b", question_text: "the purposes of processing?", hint: "e.g. your organization may process personal data for the purposes of fraud prevention or better customer support", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                  <%= render partial: "question", locals: { a: a, counter: counter += 1 ,question_number: "1a", question_text: "your identity as data controller?", hint: "e.g. the name of your organization and its postal address", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
-                  <%= render partial: "question", locals: { a: a, counter: 3, question_number: "1c", question_text: "the recipients or categories of recipients of personal data?", hint: "e.g. personnel in your IT department may have access to (parts) of personal data", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                  <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1b", question_text: "the purposes of processing?", hint: "e.g. your organization may process personal data for the purposes of fraud prevention or better customer support", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
-                  <%= render partial: "question", locals: { a: a, counter: 4, question_number: "1d", question_text: "Whether the personal data processed is mandatory for the processing purposes (and the consequences of not providing the data)?", hint: "e.g. without the disclosing of a client's postal address, the company is unable to ship a product, but the birth date is just to send you some special discount on your birthday", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                  <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1c", question_text: "the recipients or categories of recipients of personal data?", hint: "e.g. personnel in your IT department may have access to (parts) of personal data", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+
+                  <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1d", question_text: "Whether the personal data processed is mandatory for the processing purposes (and the consequences of not providing the data)?", hint: "e.g. without the disclosing of a client's postal address, the company is unable to ship a product, but the birth date is just to send you some special discount on your birthday", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
                 </div> <!--- .panel-body -->
 
