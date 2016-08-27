@@ -1,5 +1,6 @@
 <div class="question <%= questionstyle%>">
-  <h4><span class="number-halo"><%= question_number.split("").pop %></span><%= question_text %></h4>
+  <% number = question_number =~ /[a-z]/i ? "-" : question_number %>
+  <h4><span class="number-halo"><%= number %></span><%= question_text %></h4>
   <% if answer_text == "yes" %>
     <%= a.input :answer_text, label: false, placeholder: hint, input_html: { name: "survey[answers_attributes][#{counter}][answer_text]", id: question_number + "answer_text", class: "question_input" } %>
   <% else %>

@@ -15,12 +15,23 @@
   }
 }
 
+#submit-btn {
+  border: 2px solid #57476d;
+  padding: 12px;
+  margin-top: 70px;
+  margin-bottom: 60px;
+  input {
+    background-color: $purple;
+    color: white;
+  }
+}
+
 .panel {
   margin-top: 80px;
   span.number-halo {
     border-bottom: 2px solid #604e79;
     margin-right: 10px;
-    letter-spacing: 6px;
+    letter-spacing: 2px;
   }
   .panel-heading {
     background-color: $purple;
@@ -67,6 +78,10 @@
       border-left: 2px solid white;
       padding-left: 20px;
       margin-right: 30px;
+    }
+    .no-border-top {
+      border-top: none;
+      padding-top: 0px;
     }
   }
 }
