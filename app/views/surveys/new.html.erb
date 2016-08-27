@@ -36,10 +36,10 @@
                   </div> <!--- #preliminary-questions-explanation" -->
 
                   <h4 class="preliminary-questions">How many employees work in your organization?</h4>
-                  <%= f.input :locality, collection: Survey::SIZES, label: false %>
+                  <%= f.input :number_of_employees, collection: Survey::SIZES, label: false %>
 
                   <h4 class="preliminary-questions">In which sector is your organization evolving?</h4>
-                  <%= f.input :number_of_employees, collection: Survey::SECTORS, label: false %>
+                  <%= f.input :locality, collection: Survey::SECTORS, label: false %>
 
                   <h4 class="preliminary-questions">In which countries/regions is your organization present?</h4>
                   <%= f.input :sector, label: false %>
