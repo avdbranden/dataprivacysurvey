@@ -1,4 +1,4 @@
-<div class="question <%= questionstyle%>">
+<div class="question <%= questionstyle %>">
   <% number = question_number =~ /[a-z]/i ? "-" : question_number %>
   <h4><span class="number-halo"><%= number %></span><%= question_text %></h4>
   <% if answer_text == "yes" %>
