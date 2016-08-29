@@ -1,4 +1,6 @@
 $(document).ready(function(){
-  $('.compliance_bar_dir').animate({width:'10%'}, 1000);
-  $('.compliance_bar_reg').animate({width:'20%'}, 1000);
+  var dir_percentage = $("#dir_percentage").text();
+  var reg_percentage = $("#reg_percentage").text();
+  $('.compliance-bar-dir').animate({width: dir_percentage}, 1000);
+  $('.compliance-bar-reg').animate({width: reg_percentage}, 1000);
 });

@@ -11,11 +11,6 @@
 
 .panel {
   margin-top: 80px;
-  span.number-halo {
-    border-bottom: 2px solid #604e79;
-    margin-right: 10px;
-    letter-spacing: 2px;
-  }
   .panel-heading {
     background-color: $purple;
     color: white;
@@ -27,18 +22,25 @@
   }
   .panel-body {
     background-color: $bg-gray;
+    .compliance-result {
+      h3 {
+        font-size: 35px;
+        font-weight: 600;
+      }
+      padding-bottom: 25px;
+    }
   }
 }
 
-.compliance_bar {
-  width:600px;
-  height:50px;
-  background:#c0c0c0;
-  margin-bottom:5px;
+.compliance-bar {
+  width: auto;
+  height: 50px;
+  background: $red;
+  margin-bottom: 5px;
 }
 
-.compliance_bar_progress {
-  width:0%;
-  height:100%;
-  background:#00f;
+.compliance-bar-progress {
+  width: 0%;
+  height: 100%;
+  background: $green;
 }

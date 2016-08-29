@@ -17,16 +17,32 @@ class SurveysController < ApplicationController
     @survey = Survey.find(params[:id])
     @score_directive = compute_scores[:score_directive]
     @score_regulation = compute_scores[:score_regulation]
+    @total_directive = compute_scores[:total_directive]
+    @total_regulation = compute_scores[:total_regulation]
+    @compliance_directive_percentage = (@score_directive / @total_directive) * 100
+    @compliance_regulation_percentage = (@score_regulation / @total_regulation) * 100
   end
 
   private
 
   def compute_scores
-    scores = { score_directive: 0, score_regulation: 0 }
+    scores = { score_directive: 0, score_regulation: 0,
+      total_directive: 0, total_regulation: 0 }
     @survey.answers.each do |answer|
       if answer.compliant == true
-        scores[:score_directive] += answer.weighting_directive
-        scores[:score_regulation] += answer.weighting_regulation
+        if answer.weighting_directive > 0
+          scores[:total_directive] += answer.weighting_directive
+          scores[:score_directive] += answer.weighting_directive
+        elsif answer.weighting_regulation > 0
+          scores[:total_regulation] += answer.weighting_regulation
+          scores[:score_regulation] += answer.weighting_regulation
+        end
+      elsif answer.compliant == false
+        if answer.weighting_directive > 0
+          scores[:total_directive] += answer.weighting_directive
+        elsif answer.weighting_regulation > 0
+          scores[:total_regulation] += answer.weighting_regulation
+        end
       end
     end
     return scores

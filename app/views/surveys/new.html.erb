@@ -107,15 +107,15 @@
 
                     <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1i", question_text: "the legal basis for data processing?", hint: "e.g. a contractual obligation, the data subject's consent, etc.", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
-                    <!--- survey-new.js ==> show only if processing data at large scale -->
+                    <!-- survey-new.js ==> show only if processing data at large scale -->
 
                     <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1j", question_text: "the contact details of the data privacy officer of your organization", hint: "No data privacy?", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
-                    <!--- End of list of indented questions -->
+                    <!-- End of list of indented questions -->
 
                     <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "2", question_text: "Are you obtaining personal data not directly from the data subject?", hint: "e.g. extracting information from their LinkedIn profile, company website, even from a business card that they have willingfully distributed", questionstyle: "", weighting_directive: 0, weighting_regulation: 0, answer_text: nil, explanation_text: nil } %>
 
-                    <!--- survey-new.js ==> show only if data obtained not directly from data processor -->
+                    <!-- survey-new.js ==> show only if data obtained not directly from data processor -->
 
                     <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "2a", question_text: "Are you disclosing this to the data subject?", hint: nil, questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
@@ -125,15 +125,15 @@
 
                     <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "5", question_text: "Are data subjects informed whenever your organizations intends to change the purposes for which their personal data has been originately collected?", hint: nil, questionstyle: "", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
-                  </div> <!--- .panel-body -->
+                  </div> <!-- .panel-body -->
 
-                </div> <!--- .panel -->
+                </div> <!-- .panel -->
 
-              <!--- ### -->
-              <!--- Survey/Information end -->
+              <!-- ### -->
+              <!-- Survey/Information end -->
 
-              <!--- Survey/Reasons of processing start -->
-              <!--- ### -->
+              <!-- Survey/Reasons of processing start -->
+              <!-- ### -->
 
                 <div class="panel panel-default">
 
@@ -141,7 +141,7 @@
                     <h2 class="panel-title">
                       Reasons for processing
                     </h2>
-                  </div> <!--- .panel-heading -->
+                  </div> <!-- .panel-heading -->
 
                   <div class="panel-body">
 
@@ -157,19 +157,19 @@
 
                     <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "6e", question_text: "For something else?", hint: "e.g. to process an order on an eCommerce platform", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 0, answer_text: "yes", explanation_text: nil } %>
 
-                    <!--- survey-new.js ==> show only if data not required from legal obligation (6e) && not for contractual arrangement (6c) && consent not secured (4) -->
+                    <!-- survey-new.js ==> show only if data not required from legal obligation (6e) && not for contractual arrangement (6c) && consent not secured (4) -->
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "6f", question_text: "Are you disclosing the reasons for processing to the data subject?", hint: "e.g. via a publicy available privacy policy", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: "yes", explanation_text: nil } %>
+                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "6f", question_text: "Are you disclosing the reasons for processing to the data subject?", hint: "e.g. via a publicy available privacy policy", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
                   </div> <!--- .panel-body -->
 
                 </div> <!--- .panel -->
 
-              <!--- ### -->
-              <!--- Survey/Reasons of processing end -->
+              <!-- ### -->
+              <!-- Survey/Reasons of processing end -->
 
-              <!--- Survey/Data subjects' rigths start -->
-              <!--- ### -->
+              <!-- Survey/Data subjects' rigths start -->
+              <!-- ### -->
 
                 <div class="panel panel-default">
 
@@ -177,11 +177,11 @@
                     <h2 class="panel-title">
                       Data subjects’ rights
                     </h2>
-                  </div> <!--- .panel-heading -->
+                  </div> <!-- .panel-heading -->
 
                   <div class="panel-body">
 
-                    <!--- survey-new.js ==> show only if consent data subject obtained (4) -->
+                    <!-- survey-new.js ==> show only if consent data subject obtained (4) -->
 
                     <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "7", question_text: "Do you have a process in place to ensure that data subjects can withdraw anytime their consent to the processing of their personal data?", hint: nil, questionstyle: "no-border-top", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
@@ -197,19 +197,19 @@
 
                     <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "11", question_text: "Do you have a process in place to ensure that the data subject’s data is deleted permanently upon request from the data subject?", hint: "TODO", questionstyle: "", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
-                    <%= # Compounding factor when no process of erasure %>
+                    <% # Compounding factor when no process of erasure %>
 
                     <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "11a1", question_text: "Are you making any processed personal data available publicly?", hint: "e.g. by creating public profiles searchable on the web trhough search engines (such as Google)", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 0, answer_text: nil, explanation_text: nil } %>
 
-                  </div> <!--- .panel-body -->
+                  </div> <!-- .panel-body -->
 
-                </div> <!--- .panel -->
+                </div> <!-- .panel -->
 
-              <!--- ### -->
-              <!--- Survey/Data subjects' rigths end -->
+              <!-- ### -->
+              <!-- Survey/Data subjects' rigths end -->
 
-              <!--- Survey/Disclosure of personal data start -->
-              <!--- ### -->
+              <!-- Survey/Disclosure of personal data start -->
+              <!-- ### -->
 
                 <div class="panel panel-default">
 
@@ -223,13 +223,13 @@
 
                     <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "12", question_text: "Are you disclosing any personal data to third parties, i.e. people and organisms outside your organization?", hint: "e.g. providers, third-party contractors, outsourced personnel, etc.", questionstyle: "no-border-top", weighting_directive: 0, weighting_regulation: 0, answer_text: nil, explanation_text: nil } %>
 
-                    <%= # If 12 == no, do not account for the below %>
+                    <% # If 12 == no, do not account for the below %>
 
                     <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "12a", question_text: "Are you informing the data subjects about disclosures of data to third parties?", hint: nil, questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
                     <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "13", question_text: "Are you transferring personal data to third countries, i.e. countries located outside of the European Union?", hint: "e.g. it may be that your organization is using a US-based ERP (Enterprise Resource Planning) software with servers located in the US to process employee information?", questionstyle: "", weighting_directive: 0, weighting_regulation: 0, answer_text: nil, explanation_text: nil } %>
 
-                    <%= # If 13 == no, do not account for the below %>
+                    <% # If 13 == no, do not account for the below %>
 
                     <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "13a", question_text: "To which countries?", hint: "e.g. the Unites States", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 0, answer_text: "yes", explanation_text: nil } %>
 
@@ -237,20 +237,20 @@
 
                     <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "13c", question_text: "Are you condifent enough to state that those countries offer an adequate level of protection with regards to the processing of personal data", hint: "", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: "yes", explanation_text: nil } %>
 
-                    <%= # If 13c == yes, do not account for the below %>
-                    <%= # If 13c == no, do not account for the above %>
+                    <% # If 13c == yes, do not account for the below %>
+                    <% # If 13c == no, do not account for the above %>
 
                     <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "13c1", question_text: "Is there a mechanism in place to guarantee an adequate level of protection to personal data transferred to a third country?", hint: "e.g. standard data protection clauses", questionstyle: "indentmore", weighting_directive: 1, weighting_regulation: 1, answer_text: "yes", explanation_text: nil } %>
 
-                  </div> <!--- .panel-body -->
+                  </div> <!-- .panel-body -->
 
-                </div> <!--- .panel -->
+                </div> <!-- .panel -->
 
-              <!--- ### -->
-              <!--- Survey/Disclosure of personal end -->
+              <!-- ### -->
+              <!-- Survey/Disclosure of personal end -->
 
-              <!--- Survey/Email or online marketing start -->
-              <!--- ### -->
+              <!-- Survey/Email or online marketing start -->
+              <!-- ### -->
 
                 <div class="panel panel-default">
 
@@ -258,27 +258,27 @@
                     <h2 class="panel-title">
                       Email or online marketing
                     </h2>
-                  </div> <!--- .panel-heading -->
+                  </div> <!-- .panel-heading -->
 
                   <div class="panel-body">
 
                     <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "14", question_text: "Are you using email/online marketing?", hint: "e.g. sending out of a newsletter", questionstyle: "no-border-top", weighting_directive: 0, weighting_regulation: 0, answer_text: nil, explanation_text: nil } %>
 
-                    <%= # If 14 == yes, do not account for the below %>
+                    <% # If 14 == yes, do not account for the below %>
 
                     <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "14a", question_text: "Are you asking for the data subject's permission?", hint: "e.g. via the ticking of a 'subscribe me' checkbox", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
                     <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "14b", question_text: "Are you ensuring the right of the data subject to receiving online marketing content?", hint: "e.g. via an 'unsubscribe me' option", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
-                  </div> <!--- .panel-body -->
+                  </div> <!-- .panel-body -->
 
-                </div> <!--- .panel -->
+                </div> <!-- .panel -->
 
-              <!--- ### -->
-              <!--- Survey/Email or online marketing end -->
+              <!-- ### -->
+              <!-- Survey/Email or online marketing end -->
 
-              <!--- Survey/Record of processing activities start -->
-              <!--- ### -->
+              <!-- Survey/Record of processing activities start -->
+              <!-- ### -->
 
                 <div class="panel panel-default">
 
@@ -300,21 +300,23 @@
 
                     <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "15d", question_text: "the categories of recipients, whether or not those are acting as sub-contractors?", hint: "e.g. employees, IT providers, etc.", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "15e", question_text: "where applicable, the names of the third countries (i.e. countries outside of the EU) to which your organization is transfering personal data", hint: nil, questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <% # survey-new.js ==> Show only if data transferred to third countries (12) %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "15f", question_text: "the envisaged time limits for erasure of the different categories of data", hint: nil, questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "15e", question_text: "where applicable, the names of the third countries (i.e. countries outside of the EU) to which your organization is transfering personal data", hint: "", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "15g", question_text: "a general description of the technical and organisational security measures put in place by your organisation to ensure an appropriate levale of security of the personal data", hint: nil, questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "15f", question_text: "the envisaged time limits for erasure of the different categories of data", hint: "", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
-                  </div> <!--- .panel-body -->
+                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "15g", question_text: "a general description of the technical and organisational security measures put in place by your organisation to ensure an appropriate levale of security of the personal data", hint: "", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+
+                  </div>
 
                 </div> <!--- .panel -->
 
               <!--- ### -->
               <!--- Survey/Data breach end -->
 
-                            <!--- Survey/Email or online marketing start -->
-              <!--- ### -->
+              <!-- Survey/Email or online marketing start -->
+              <!-- ### -->
 
                 <div class="panel panel-default">
 
@@ -332,30 +334,30 @@
 
                     <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "18", question_text: "Is there a template document ready to notify the supervisory authority of a data breach?", hint: nil, questionstyle: "", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
 
-                  </div> <!--- .panel-body -->
+                  </div> <!-- .panel-body -->
 
-                </div> <!--- .panel -->
+                </div> <!-- .panel -->
 
-              <!--- ### -->
-              <!--- Survey/Data breach end -->
+              <!-- ### -->
+              <!-- Survey/Data breach end -->
 
               <% end %> <!--- Simple fields end-->
 
             </div> <!--- #bulk-questions -->
 
-          <!--- Survey/ bulk questions end -->
-          <!--- ### -->
+          <!-- Survey/ bulk questions end -->
+          <!-- ### -->
             <div id="submit-btn">
               <%= f.submit "Get Data Privacy Compliance Report", class: "btn center-block btn-lg" %>
             </div>
 
-         <% end %> <!--- Simple form end-->
+         <% end %> <!-- Simple form end-->
 
-      </div> <!--- .col-xs-12 col-md-8 col-md-offset-2 -->
-    </div> <!--- .row -->
-  </div> <!--- .container-->
-</div> <!--- #survey -->
+      </div> <!-- .col-xs-12 col-md-8 col-md-offset-2 -->
+    </div> <!-- .row -->
+  </div> <!-- .container-->
+</div> <!-- #survey -->
 
-<!--- Survey End-->
+<!-- Survey End-->
 
-<!--- Survey/ bulk questions -->
+<!-- Survey/ bulk questions -->
