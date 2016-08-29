@@ -4,6 +4,14 @@
 //   $(".question").hide();
 //   $(".question:first").show();
 
+//   // Hide the 1j question input on the requirement to mention name of
+//   // data privacy officer when no data processed at large scale
+//   $(".input_data_processor").click(function(e) {
+//     if ( $("input[name*=data_processor]:checked").val() == "false" ) {
+//       $("#1jcompliant").closest(".question").hide();
+//     }
+//   })
+
 //   $(".question_input").click(function(e){
 
 //     if ( this.id == "1acompliant" ) {
@@ -44,8 +52,6 @@
 //       console.log($("#survey_number_of_employees").val())
 //       if ( $("input[name*=data_processor]").is(":checked") ) {
 //         console.log("data processor checked");
-//         $(event.target).closest(".question").next(".question").slideDown();
-//       } else if ( $("#survey_number_of_employees").val() == "Above 200" ) {
 //         $(event.target).closest(".question").next(".question").slideDown();
 //       }
 //     }
