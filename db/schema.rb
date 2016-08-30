@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(version: 20160826124245) do
     t.float    "weighting_directive"
     t.float    "weighting_regulation"
     t.text     "explanation_text"
+    t.text     "good_answer_text"
+    t.text     "bad_answer_text"
+    t.string   "requiredness"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end

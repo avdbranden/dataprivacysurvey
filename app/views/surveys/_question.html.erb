@@ -11,6 +11,9 @@
   <%= a.hidden_field :question_text, value: question_text, name: "survey[answers_attributes][#{counter}][question_text]", id: question_number + "text" %>
   <%= a.hidden_field :weighting_directive, value: weighting_directive, name: "survey[answers_attributes][#{counter}][weighting_directive]", id: question_number + "weighting_directive" %>
   <%= a.hidden_field :weighting_regulation, value: weighting_regulation, name: "survey[answers_attributes][#{counter}][weighting_regulation]", id: question_number + "weighting_regulation" %>
+  <%= a.hidden_field :good_answer_text, value: good_answer_text, name: "survey[answers_attributes][#{counter}][good_answer_text]", id: question_number + "good_answer_text" %>
+  <%= a.hidden_field :bad_answer_text, value: bad_answer_text, name: "survey[answers_attributes][#{counter}][bad_answer_text]", id: question_number + "bad_answer_text" %>
   <%= a.hidden_field :explanation_text, value: explanation_text, name: "survey[answers_attributes][#{counter}][explanation_text]", id: question_number + "explanation_text" %>
+  <%= a.hidden_field :requiredness, value: requiredness, name: "survey[answers_attributes][#{counter}][requiredness]", id: question_number + "requiredness" %>
 </div>
 

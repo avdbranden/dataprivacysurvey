@@ -81,49 +81,255 @@
 
                     <% counter = 0 %> <!--- initializing a counter -->
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1 ,question_number: "1a", question_text: "your identity as data controller?", hint: "e.g. the name of your organization and its postal address", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question", locals:
+                    { a: a,
+                      counter: counter += 1,
+                      question_number: "1a",
+                      question_text: "your identity as data controller?",
+                      hint: "e.g. the name of your organization and its postal address",
+                      questionstyle: "indent",
+                      weighting_directive: 1,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: "You are informing the data subject of your identity as data controller",
+                      bad_answer_text: "You are not informing the data subject of your identity as data controller",
+                      explanation_text: "Both the current Directive and the upcoming Regulation require data controllers to inform the data subject about their identity as data controller. A quickfix would be to update the data privacy policy with the required information",
+                      requiredness: "required" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1b", question_text: "the purposes of processing?", hint: "e.g. your organization may process personal data for the purposes of fraud prevention or better customer support", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question", locals:
+                    { a: a,
+                      counter: counter += 1,
+                      question_number: "1b",
+                      question_text: "the purposes of processing?",
+                      hint: "e.g. your organization may process personal data for the purposes of fraud prevention or better customer support",
+                       questionstyle: "indent",
+                       weighting_directive: 1,
+                       weighting_regulation: 1,
+                       answer_text: nil,
+                       good_answer_text: "You are informing the data subject of the purposes of processing",
+                       bad_answer_text: "You are not informing the data subject of the purposes of processing",
+                       explanation_text: "Both the current Directive and the upcoming Regulation require data controllers to inform the data subject about the purposes of processing. A quickfix would be to update the data privacy policy with the required information",
+                       requiredness: "required" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1c", question_text: "the recipients or categories of recipients of personal data?", hint: "e.g. personnel in your IT department may have access to (parts) of personal data", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question", locals:
+                    { a: a,
+                      counter: counter += 1,
+                      question_number: "1c",
+                      question_text: "the recipients or categories of recipients of personal data?",
+                      hint: "e.g. personnel in your IT department may have access to (parts) of personal data",
+                      questionstyle: "indent",
+                      weighting_directive: 1,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: "You are informing the data subject about the recipients or categories of recipients of personal data",
+                      bad_answer_text: "You are not informing the data subject about the recipients or categories of recipients of personal data",
+                      explanation_text: "Both the current Directive and the upcoming Regulation require data controllers to inform the data subject about the recipients or categories of recipients of personal data. A quickfix would be to update the data privacy policy with the required information",
+                      requiredness: "required" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1d", question_text: "Whether the personal data processed is mandatory for the processing purposes (and the consequences of not providing the data)?", hint: "e.g. without the disclosing of a client's postal address, the company is unable to ship a product, but the birth date is just to send you some special discount on your birthday", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 0, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "1d",
+                      question_text: "Whether the personal data processed is mandatory for the processing purposes (and the consequences of not providing the data)?",
+                      hint: "e.g. without the disclosing of a client's postal address, the company is unable to ship a product, but the birth date is just to send you some special discount on your birthday",
+                      questionstyle: "indent",
+                      weighting_directive: 1,
+                      weighting_regulation: 0,
+                      answer_text: nil,
+                      good_answer_text: "You are informing the data subject about the mandatory / optional aspect of the processing of certain personal data",
+                      bad_answer_text: "You are not informing the data subject about the manadatory / optional aspect of the processing of certain personal data",
+                      explanation_text: "The current Directive require data controllers to inform the data subject about the mandatory / optional aspect of the processing of certain personal data. A quickfix would be to update the data privacy policy with the required information. The upcoming Regulation foregoes this requirement",
+                      requiredness: "required" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1e", question_text: "the existence of the data subject’s rights to access and rectify its personal data?", hint: nil, questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "1e",
+                      question_text: "the existence of the data subject’s rights to access and rectify its personal data?",
+                      hint: nil,
+                      questionstyle: "indent",
+                      weighting_directive: 1,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: "You are informing the the data subject about its rights to access and rectify personal data",
+                      bad_answer_text: "You are not informing the data subject about its rights to access and rectify personal data",
+                     explanation_text: "Both the current Directive and the upcoming Regulation require data controllers to inform about the existence of the data subject’s rights to access and rectify its personal data. A quickfix would be to update the data privacy policy with the required information.",
+                     requiredness: "required" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1f", question_text: "the duration for which the personal data is stored and processed?", hint: nil, questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "1f",
+                      question_text: "the duration for which the personal data is stored and processed?",
+                      hint: nil,
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: "You are informing the data subject about duration for which the personal data is stored and processed",
+                      bad_answer_text: "You are not informing the data subject about duration for which the personal data is stored and processed",
+                      explanation_text: "The upcoming Regulation require data controllers to inform the data subject about the duration for which the personal data is stored and processed. A quickfix would be to update the data privacy policy with the required information.",
+                      requiredness: "required" } %>
 
                     <!-- survey-new.js ==> show only if data subject informed about duration data processing -->
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1f1", question_text: "Hence, what is the average time limit?", hint: "Maximum 1 year, 3 years on average, ...", questionstyle: "indentmore", weighting_directive: 0, weighting_regulation: 0, answer_text: "yes", explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "1f1",
+                      question_text: "Hence, what is the average time limit?",
+                      hint: "Maximum 1 year, 3 years on average, ...",
+                      questionstyle: "indentmore",
+                      weighting_directive: 0,
+                      weighting_regulation: 0,
+                      answer_text: "yes",
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "optional" } %>
 
                     <!-- survey-new.js ==> show only if data subject NOT informed about duration data processing -->
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1f2", question_text: "Hence, is there a time limit to processing data", hint: nil, questionstyle: "indentmore", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "1f2",
+                      question_text: "Hence, is there a time limit to processing data",
+                      hint: nil,
+                      questionstyle: "indentmore",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: "There are time limits / maximum durations to the processing of personal data",
+                      bad_answer_text: "There are time limits / maximum durations to the processing of personal data",
+                      explanation_text: "The upcoming Regulation requires data controllers to determine the period for which the personal data will be stored, or if that is not possible, the criteria used to determine that period. This would require a company-wide discussion to determine the maximum duration of processing of certain kinds of personal data",
+                      requiredness: "required-when-activated" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1g", question_text: "the existence of the right of erasure of personal data?", hint: nil, questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "1g",
+                      question_text: "the existence of the right of erasure of personal data?",
+                      hint: nil,
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: "You are informing the the data subject about the existence of the right of erasure of personal data",
+                      bad_answer_text: "You are not informing the data subject about the existence of the right of erasure of personal data",
+                      explanation_text: "The upcoming Regulation requires data controllers to inform about the existence of the right of erasure of personal data. A quickfix would be to update the data privacy policy with the required information.",
+                      requiredness: "required" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1h", question_text: "the right to lodge a complaint with your national supervisory authority?", hint: "In Belgium, this would be the Privacy Commission", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "1h",
+                      question_text: "the right to lodge a complaint with your national supervisory authority?",
+                      hint: "In Belgium, this would be the Privacy Commission",
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: "You are informing the the data subject about the right to lodge a complaint with your national supervisory authority",
+                      bad_answer_text: "You are not informing the data subject about the right to lodge a complaint with your national supervisory authority",
+                      explanation_text: "The upcoming Regulation requires data controllers to inform about the right to lodge a complaint with your national supervisory authority (in Belgium, the national supervisory authority is the Privacy Commission). A quickfix would be to update the data privacy policy with the required information.",
+                      requiredness: "required" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1i", question_text: "the legal basis for data processing?", hint: "e.g. a contractual obligation, the data subject's consent, etc.", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "1i",
+                      question_text: "the legal basis for data processing?",
+                      hint: "e.g. a contractual obligation, the data subject's consent, etc.",
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: "You are informing the data subject about the legal basis for data processing",
+                      bad_answer_text: "You are not informing the data subject about the legal basis for data processing",
+                      explanation_text: "The upcoming Regulation requires data controllers to inform the data subject about the legal basis for data processing. A quickfix would be to update the data privacy policy with the required information.",
+                      requiredness: "required" } %>
 
                     <!-- survey-new.js ==> show only if processing data at large scale -->
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "1j", question_text: "the contact details of the data privacy officer of your organization", hint: "No data privacy?", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "1j",
+                      question_text: "the contact details of the data privacy officer of your organization",
+                      hint: "No data privacy?",
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: "You are informing the data subject about the data protection officer of your organization",
+                      bad_answer_text: "You are not informing the data subject about the data protection officer of your organization",
+                      explanation_text: "The upcoming Regulation requires data controllers to inform the data subject about the data privacy officer of your organization. A quickfix would be to update the data protection policy with the required information.",
+                      requiredness: "required-when-activated" } %>
+
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "1j1",
+                      question_text: "Has your organization a staff member appointed as data protection officer?",
+                      hint: "",
+                      questionstyle: "indentmore",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: "Your organization has appointed a data protection officer",
+                      bad_answer_text: "Your organization has not appointed a data protection officer",
+                      explanation_text: "TODO",
+                      requiredness: "required-when-activated" } %>
 
                     <!-- End of list of indented questions -->
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "2", question_text: "Are you obtaining personal data not directly from the data subject?", hint: "e.g. extracting information from their LinkedIn profile, company website, even from a business card that they have willingfully distributed", questionstyle: "", weighting_directive: 0, weighting_regulation: 0, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "2",
+                      question_text: "Are you obtaining personal data not directly from the data subject?",
+                      hint: "e.g. extracting information from their LinkedIn profile, company website, even from a business card that they have willingfully distributed",
+                      questionstyle: "",
+                      weighting_directive: 0,
+                      weighting_regulation: 0,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "optional" } %>
 
                     <!-- survey-new.js ==> show only if data obtained not directly from data processor -->
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "2a", question_text: "Are you disclosing this to the data subject?", hint: nil, questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "2a",
+                      question_text: "Are you informing the data subject about this?",
+                      hint: "e.g. via a statement in a data privacy policy that is publicly available",
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: "You are informing the data subject about the fact that personal data is not directly obtained from the data subject",
+                      bad_answer_text: "You are not informing the data subject about the fact that personal data is not directly obtained from the data subject",
+                      explanation_text: "The upcoming Regulation requires data controllers to inform the data subject when personal data is obtained not directly from her, either personally, or, if this involve disproportionate effore, by making the information publicly available",
+                      requiredness: "required-wen-activated" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "3", question_text: "Do you make the above information publicly available?", hint: "e.g. via a data privacy policy on your website such as this example", questionstyle: "", weighting_directive: 3, weighting_regulation: 3, answer_text: nil, explanation_text: nil } %>
-
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "4", question_text: "Do data subjects have to acknowledge the fact they have received or read the privacy information you provided?", hint: "e.g. by clicking on a 'I have read the privacy policy' checkbox?", questionstyle: "", weighting_directive: 0, weighting_regulation: 0, answer_text: nil, explanation_text: nil } %>
-
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "5", question_text: "Are data subjects informed whenever your organizations intends to change the purposes for which their personal data has been originately collected?", hint: nil, questionstyle: "", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "3",
+                      question_text: "Do data subjects have to acknowledge the fact that they have received or read the privacy information listed above?",
+                      hint: "e.g. by clicking on a 'I have read the privacy policy' checkbox?",
+                      questionstyle: "",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: "You are making the data subject acknowledge the fact that they have received or read the required privacy information",
+                      bad_answer_text: "You are not making the data subject acknowledge the fact that they have received or read the required privacy information",
+                      explanation_text: "The upcoming Regulation requires data controllers to take appropriate measures to provide any required information to the data subject. The easiest and most tight-proof way is make data subjects acknowledge the reading of the required information by adding a checkbox conditional to the use of your services / creation of an account for example",
+                      requiredness: "required" } %>
 
                   </div> <!-- .panel-body -->
 
@@ -145,21 +351,115 @@
 
                   <div class="panel-body">
 
-                    <h4><span class="number-halo">6</span>Why are you processing personal data?</h4>
+                    <h4><span class="number-halo">4</span>Why are you processing personal data?</h4>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "6a", question_text: "So that the data subject can be contacted?", hint: "e.g. via a 'contact us' form on your organization's website", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 0, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "4a",
+                      question_text: "So that the you can get in touch with data subjects, even when they are not interested in your the services you provide?",
+                      hint: "e.g. via a 'contact us' form on your organization's website",
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 0,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "optional" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "6b", question_text: "So that the data subject can subscribe to a newsletter?", hint: "e.g. subscribe to a mailing list", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 0, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "6b",
+                      question_text: "So that the data subject can subscribe to a newsletter?",
+                      hint: "e.g. subscribe to a mailing list",
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 0,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "optional" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "6c", question_text: "To enter (or make preliminary steps for entering into) a contractual arrangement or an exchange of goods or services?", hint: "e.g. to process an order on an eCommerce platform", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 0, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "6c",
+                      question_text: "To enter (or make preliminary steps for entering into) a contractual arrangement or an exchange of goods or services?",
+                      hint: "e.g. to process an order on an eCommerce platform",
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 0,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "optional" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "6d", question_text: "To comply with a legal obligation, to protect the vital interests or to perform a task carried out in the public interest?", hint: "", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 0, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "6d",
+                      question_text: "To comply with a legal obligation, to protect the vital interests or to perform a task carried out in the public interest?",
+                      hint: "",
+                      questionstyle:
+                      "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 0,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "optional" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "6e", question_text: "For something else?", hint: "e.g. to process an order on an eCommerce platform", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 0, answer_text: "yes", explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "6e",
+                      question_text: "Because the data subject has given his consent to the processing of his personal data?",
+                      hint: "Which you should be able to demonstrate",
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 0,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required" } %>
 
-                    <!-- survey-new.js ==> show only if data not required from legal obligation (6e) && not for contractual arrangement (6c) && consent not secured (4) -->
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "6e",
+                      question_text: "For something else?",
+                      hint: "e.g. to process an order on an eCommerce platform",
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 0,
+                      answer_text: "yes",
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "6f", question_text: "Are you disclosing the reasons for processing to the data subject?", hint: "e.g. via a publicy available privacy policy", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <!-- survey-new.js ==> show only if data not required from legal obligation (6d) && not for contractual arrangement (6c) && consent not secured (6e) -->
+
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "6f",
+                      question_text: "Are you informing the data subject about the reasons for processing?",
+                      hint: "e.g. via a publicy available privacy policy",
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: "You are inforing the data subject about the reasons for processing",
+                      bad_answer_text: "You are not inforing the data subject about the reasons for processing",
+                      explanation_text: "Whenever the reason for processing personal data is not based on the data subject's consent, nor for the performance of a contract (including the preliminary steps leading to the conclusion of a contract), nor is ir required to comply with a legal obligation, to protect the vital interests or to perform a task carried out in the public interest, the data subject should be informed about the legitimate interests pursued by your organization in processing their personal data",
+                      requiredness: "required-when-activated" } %>
 
                   </div> <!--- .panel-body -->
 
@@ -181,25 +481,129 @@
 
                   <div class="panel-body">
 
-                    <!-- survey-new.js ==> show only if consent data subject obtained (4) -->
+                    <!-- survey-new.js ==> show only if consent data subject obtained (6e) -->
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "7", question_text: "Do you have a process in place to ensure that data subjects can withdraw anytime their consent to the processing of their personal data?", hint: nil, questionstyle: "no-border-top", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "7",
+                      question_text: "Do you have a process in place to ensure that data subjects can withdraw anytime their consent to the processing of their personal data?",
+                      hint: nil,
+                      questionstyle: "no-border-top",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: "Your organization has a process in place to ensure that data subjects can withdraw anytime their consent to the processing of their personal data",
+                      bad_answer_text: "Your organization does not have a process in place to ensure that data subjects can withdraw anytime their consent to the processing of their personal data",
+                      explanation_text: "the upcoming Regulation TODO",
+                      requiredness: "required-when-activated" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "7a", question_text: "Are you informing data subjects about their right to withdraw  consent?", hint: nil, questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "7a",
+                      question_text: "Are you informing data subjects about their right to withdraw  consent?",
+                      hint: nil,
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required-when-activated" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "7b", question_text: "Is it as easy for the data subject to withdraw consent than to give consent?", hint: "e.g. if the data subject has ticked a checkbox, is it possible for him to uncheck the checkbox?", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "7b",
+                      question_text: "Is it as easy for the data subject to withdraw consent than to give consent?",
+                      hint: "e.g. if the data subject has ticked a checkbox, is it possible for him to uncheck the checkbox?",
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required-when-activated" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "8", question_text: "Do you have a process in place to ensure data subjects obtain a copy of personal data?", hint: "e.g. in a PDF format", questionstyle: "", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "8",
+                      question_text: "Do you have a process in place to ensure data subjects obtain a copy of personal data?",
+                      hint: "e.g. in a PDF format",
+                      questionstyle: "",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "9", question_text: "Do you have a process in place to ensure data subjects obtain copy of personal data in machine-readable format?", hint: "e.g. in a Json format, if you are familiar with the term", questionstyle: "", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "9",
+                      question_text: "Do you have a process in place to ensure data subjects obtain copy of personal data in machine-readable format?",
+                      hint: "e.g. in a Json format, if you are familiar with the term",
+                      questionstyle: "",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "10", question_text: "Do you have a process in place to ensure the right of rectification to data?", hint: "e.g. automatic profile update", questionstyle: "", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "10",
+                      question_text: "Do you have a process in place to ensure the right of rectification to data?",
+                      hint: "e.g. automatic profile update",
+                      questionstyle: "",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "11", question_text: "Do you have a process in place to ensure that the data subject’s data is deleted permanently upon request from the data subject?", hint: "TODO", questionstyle: "", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "11",
+                      question_text: "Do you have a process in place to ensure that the data subject’s data is deleted permanently upon request from the data subject?",
+                      hint: "TODO",
+                      questionstyle: "",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required" } %>
 
                     <% # Compounding factor when no process of erasure %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "11a1", question_text: "Are you making any processed personal data available publicly?", hint: "e.g. by creating public profiles searchable on the web trhough search engines (such as Google)", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 0, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "11a1",
+                      question_text: "Are you making any processed personal data available publicly?",
+                      hint: "e.g. by creating public profiles searchable on the web trhough search engines (such as Google)",
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 0,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "optional" } %>
 
                   </div> <!-- .panel-body -->
 
@@ -221,26 +625,116 @@
 
                   <div class="panel-body">
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "12", question_text: "Are you disclosing any personal data to third parties, i.e. people and organisms outside your organization?", hint: "e.g. providers, third-party contractors, outsourced personnel, etc.", questionstyle: "no-border-top", weighting_directive: 0, weighting_regulation: 0, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "12",
+                      question_text: "Are you disclosing any personal data to third parties, i.e. people and organisms outside your organization?",
+                      hint: "e.g. providers, third-party contractors, outsourced personnel, etc.",
+                      questionstyle: "no-border-top",
+                      weighting_directive: 0,
+                      weighting_regulation: 0,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required" } %>
 
                     <% # If 12 == no, do not account for the below %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "12a", question_text: "Are you informing the data subjects about disclosures of data to third parties?", hint: nil, questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a, counter: counter += 1,
+                      question_number: "12a",
+                      question_text: "Are you informing the data subjects about disclosures of data to third parties?",
+                      hint: nil,
+                      questionstyle: "indent",
+                      weighting_directive: 1,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required-when-activated" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "13", question_text: "Are you transferring personal data to third countries, i.e. countries located outside of the European Union?", hint: "e.g. it may be that your organization is using a US-based ERP (Enterprise Resource Planning) software with servers located in the US to process employee information?", questionstyle: "", weighting_directive: 0, weighting_regulation: 0, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "13",
+                      question_text: "Are you transferring personal data to third countries, i.e. countries located outside of the European Union?",
+                      hint: "e.g. it may be that your organization is using a US-based ERP (Enterprise Resource Planning) software with servers located in the US to process employee information?",
+                      questionstyle: "",
+                      weighting_directive: 0,
+                      weighting_regulation: 0,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required" } %>
 
                     <% # If 13 == no, do not account for the below %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "13a", question_text: "To which countries?", hint: "e.g. the Unites States", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 0, answer_text: "yes", explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "13a",
+                      question_text: "To which countries?",
+                      hint: "e.g. the Unites States",
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 0,
+                      answer_text: "yes",
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "optional" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "13b", question_text: "Are you informing the data subjects about data transfers to third countries?", hint: nil, questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "13b",
+                      question_text: "Are you informing the data subjects about data transfers to third countries?",
+                      hint: nil,
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required-when-activated" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "13c", question_text: "Are you condifent enough to state that those countries offer an adequate level of protection with regards to the processing of personal data", hint: "", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: "yes", explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "13c",
+                      question_text: "Are you confident enough to state that those third countries or the data transferees located in those third countries offer an adequate level of protection with regards to the processing of personal data",
+                      hint: "",
+                      questionstyle: "indent",
+                      weighting_directive: 1,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required-when-activated" } %>
 
                     <% # If 13c == yes, do not account for the below %>
                     <% # If 13c == no, do not account for the above %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "13c1", question_text: "Is there a mechanism in place to guarantee an adequate level of protection to personal data transferred to a third country?", hint: "e.g. standard data protection clauses", questionstyle: "indentmore", weighting_directive: 1, weighting_regulation: 1, answer_text: "yes", explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "13c1",
+                      question_text: "What would be the mechanism(s) in place to ensure such level of adequacy?",
+                      hint: "e.g. standard data protection clauses",
+                      questionstyle: "indentmore",
+                      weighting_directive: 0,
+                      weighting_regulation: 0,
+                      answer_text: "yes",
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required-when-activated" } %>
 
                   </div> <!-- .panel-body -->
 
@@ -262,13 +756,52 @@
 
                   <div class="panel-body">
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "14", question_text: "Are you using email/online marketing?", hint: "e.g. sending out of a newsletter", questionstyle: "no-border-top", weighting_directive: 0, weighting_regulation: 0, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "14",
+                      question_text: "Are you using email/online marketing?",
+                      hint: "e.g. sending out of a newsletter",
+                      questionstyle: "no-border-top",
+                      weighting_directive: 0,
+                      weighting_regulation: 0,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required" } %>
 
                     <% # If 14 == yes, do not account for the below %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "14a", question_text: "Are you asking for the data subject's permission?", hint: "e.g. via the ticking of a 'subscribe me' checkbox", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "14a",
+                      question_text: "Are you asking for the data subject's permission?",
+                      hint: "e.g. via the ticking of a 'subscribe me' checkbox",
+                      questionstyle: "indent",
+                      weighting_directive: 1,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required-when-activated" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "14b", question_text: "Are you ensuring the right of the data subject to receiving online marketing content?", hint: "e.g. via an 'unsubscribe me' option", questionstyle: "indent", weighting_directive: 1, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "14b",
+                      question_text: "Are you ensuring the right of the data subject to receiving online marketing content?",
+                      hint: "e.g. via an 'unsubscribe me' option",
+                      questionstyle: "indent",
+                      weighting_directive: 1,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required-when-activated" } %>
 
                   </div> <!-- .panel-body -->
 
@@ -292,21 +825,112 @@
 
                     <h4><span class="number-halo">14</span>Are you keeping the below information at the disposal of the data protection supervisory authorities:</h4>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "15a", question_text: "the name and contact details of your ognaization?", hint: nil, questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "15a",
+                      question_text: "the name and contact details of your ognaization?",
+                      hint: nil,
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "15b", question_text: "the purposes of processing?", hint: nil, questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "15b",
+                      question_text: "the purposes of processing?",
+                      hint: nil,
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "15c", question_text: "the categories of data subjects and categories of data?", hint: "e.g. you could process personal data from buyers and sellers if you were operating a marketplace", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "15c",
+                      question_text: "the categories of data subjects and categories of data?",
+                      hint: "e.g. you could process personal data from buyers and sellers if you were operating a marketplace",
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "15d", question_text: "the categories of recipients, whether or not those are acting as sub-contractors?", hint: "e.g. employees, IT providers, etc.", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "15d",
+                      question_text: "the categories of recipients, whether or not those are acting as sub-contractors?",
+                      hint: "e.g. employees, IT providers, etc.",
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required" } %>
 
                     <% # survey-new.js ==> Show only if data transferred to third countries (12) %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "15e", question_text: "where applicable, the names of the third countries (i.e. countries outside of the EU) to which your organization is transfering personal data", hint: "", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "15e",
+                      question_text: "where applicable, the names of the third countries (i.e. countries outside of the EU) to which your organization is transfering personal data",
+                      hint: "",
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required-when-activated" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "15f", question_text: "the envisaged time limits for erasure of the different categories of data", hint: "", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "15f",
+                      question_text: "the envisaged time limits for erasure of the different categories of data",
+                      hint: "",
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "15g", question_text: "a general description of the technical and organisational security measures put in place by your organisation to ensure an appropriate levale of security of the personal data", hint: "", questionstyle: "indent", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "15g",
+                      question_text: "a general description of the technical and organisational security measures put in place by your organisation to ensure an appropriate levale of security of the personal data",
+                      hint: "",
+                      questionstyle: "indent",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required" } %>
 
                   </div>
 
@@ -328,11 +952,50 @@
 
                   <div class="panel-body">
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "16", question_text: "Has your organization a policy in place to react in case of a data breach?", hint: "e.g. when personal data is being leaked outside the organization, whether or not by fraudulent means", questionstyle: "no-border-top", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "16",
+                      question_text: "Has your organization a policy in place to react in case of a data breach?",
+                      hint: "e.g. when personal data is being leaked outside the organization, whether or not by fraudulent means",
+                      questionstyle: "no-border-top",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: nil,
+                      bad_answer_text: nil,
+                      explanation_text: nil,
+                      requiredness: "required" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "17", question_text: "Are there any organized processes put in place to contact individually each data subject in case of a data breach?", hint: nil, questionstyle: "", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "17",
+                      question_text: "Are there any organized processes put in place to contact individually each data subject in case of a data breach?",
+                      hint: nil,
+                      questionstyle: "",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      good_answer_text: nil,
+                      bad_answer_text: "test good 17",
+                      answer_text: "test bad 17",
+                      explanation_text: "test explanation 17",
+                      requiredness: "required" } %>
 
-                    <%= render partial: "question", locals: { a: a, counter: counter += 1, question_number: "18", question_text: "Is there a template document ready to notify the supervisory authority of a data breach?", hint: nil, questionstyle: "", weighting_directive: 0, weighting_regulation: 1, answer_text: nil, explanation_text: nil } %>
+                    <%= render partial: "question",
+                    locals: { a: a,
+                      counter: counter += 1,
+                      question_number: "18",
+                      question_text: "Is there a template document ready to notify the supervisory authority of a data breach?",
+                      hint: nil,
+                      questionstyle: "",
+                      weighting_directive: 0,
+                      weighting_regulation: 1,
+                      answer_text: nil,
+                      good_answer_text: "test good 18",
+                      bad_answer_text: "test bad 18",
+                      explanation_text: "test explanation 18",
+                      requiredness: "required" } %>
 
                   </div> <!-- .panel-body -->
 

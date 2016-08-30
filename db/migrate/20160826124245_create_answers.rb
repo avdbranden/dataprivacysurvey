@@ -9,6 +9,9 @@ class CreateAnswers < ActiveRecord::Migration
       t.float :weighting_directive
       t.float :weighting_regulation
       t.text :explanation_text
+      t.text :good_answer_text
+      t.text :bad_answer_text
+      t.string :requiredness
 
       t.timestamps null: false
     end

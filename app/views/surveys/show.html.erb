@@ -60,14 +60,19 @@
             <div class="row">
               <div class="col-xs-12 col-md-8 col-md-offset-2">
                 <div class="answer">
-                  <div class="panel">
-                    <div class="panel-heading">
-                      <h4><%= answer.question_text%></h4>
+                  <% if answer.compliant == true %>
+                    <div class="panel">
+                      <div class="panel-heading good_answer">
+                        <h4><%= answer.good_answer_text %></h4>
+                      </div>
                     </div>
-                    <div class="panel-body">
-                      <h4><%= answer.explanation_text%></h4>
+                  <% elsif answer.compliant == false %>
+                    <div class="panel">
+                      <div class="panel-heading bad_answer">
+                        <h4><%= answer.bad_answer_text %></h4>
+                      </div>
                     </div>
-                  </div>
+                  <% end %>
                 </div> <!-- .answer -->
               </div>
             </div>

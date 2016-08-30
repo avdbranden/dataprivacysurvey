@@ -44,3 +44,12 @@
   height: 100%;
   background: $green;
 }
+
+#rapport-answers {
+  .good_answer {
+    background-color: $green;
+  }
+  .bad_answer {
+    background-color: $red;
+  }
+}
