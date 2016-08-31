@@ -23,7 +23,7 @@ $(document).ready(function(){
 
   // Immediately show first question of first panel
   // showPanel(1);
-  showPanel(1);
+  showPanel(2);
 
   // Add event listener on the radio_button pair od the preliminary question
   // as to whether organization is a data processor at large scale
@@ -140,7 +140,7 @@ $(document).ready(function(){
       }
     } else if ( this.id == "3compliant" ) {
       console.log("clicked on 3compliant");
-      // Immediately show first question of first panel
+      // Show first question of second panel
       showPanel(2);
     }
 
@@ -152,6 +152,58 @@ $(document).ready(function(){
     } else if ( this.id == "4bcompliant" ) {
       console.log("clicked on 4bcompliant");
       $(event.target).closest(".question").next(".question").slideDown();
+    } else if ( this.id == "4ccompliant" ) {
+      console.log("clicked on 4ccompliant");
+      $(event.target).closest(".question").next(".question").slideDown();
+      // Check if consent asked checked to 'Yes'
+      if ( $("input[id=4ecompliant]:checked").val() == "true" ) {
+        // Slide up unrelated question
+        $("#4gcompliant").closest(".question").slideUp();
+        // Setting 4g radio_buttons such as none of them are checked
+        // So to nullify any previously 'yes' or 'no' checked value in 4g
+        $("input[name*=23]").prop("checked", false);
+      }
+    } else if ( this.id == "4dcompliant" ) {
+      console.log("clicked on 4dcompliant");
+      $(event.target).closest(".question").next(".question").slideDown();
+      // Check if consent asked checked to 'Yes'
+      if ( $("input[id=4ecompliant]:checked").val() == "true" ) {
+        // Slide up unrelated question
+        $("#4gcompliant").closest(".question").slideUp();
+        // Setting 4g radio_buttons such as none of them are checked
+        // So to nullify any previously 'yes' or 'no' checked value in 4g
+        $("input[name*=23]").prop("checked", false);
+      }
+    } else if ( this.id == "4ecompliant" ) {
+      console.log("clicked on 4ecompliant");
+      $(event.target).closest(".question").next(".question").slideDown();
+      // Check if consent asked checked to 'no'
+      if ( $("input[id=4ecompliant]:checked").val() == "false" ) {
+        // Slide up unrelated question
+        $("#4gcompliant").closest(".question").slideUp();
+        // Setting 4g radio_buttons such as none of them are checked
+        // So to nullify any previously 'yes' or 'no' checked value in 4g
+        $("input[name*=23]").prop("checked", false);
+      }
+    } else if ( this.id == "4fanswer_text") {
+      // Add event listener on keyup in the text area
+      $(event.target).closest("input").keyup(function(){
+        console.log("4fanswer_text filled in");
+        // Check if 4c checked to 'No', 4d checked to 'No' & 4e checked to 'Yes'
+        if ( $("input[id=4ccompliant]:checked").val() == "false"
+          && $("input[id=4dcompliant]:checked").val() == "false"
+          && $("input[id=4ecompliant]:checked").val() == "true" ) {
+          console.log("4c ==> true, 4d ==> true & 4e ==> false");
+          // Slide down question 4g
+          $("#4gcompliant").closest(".question").slideDown();
+        } else {
+          // Show first question of third panel
+          showPanel(3);
+        }
+      })
+    } else if ( this.id == "4gcompliant") {
+      // Show first question of third panel
+      showPanel(3);
     }
 
       // PANEL-3
