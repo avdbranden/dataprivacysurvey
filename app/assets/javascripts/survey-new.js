@@ -140,33 +140,18 @@ $(document).ready(function(){
       }
     } else if ( this.id == "3compliant" ) {
       console.log("clicked on 3compliant");
-      $("#4compliant").closest(".question").slideDown();
-    } else if ( this.id == "4compliant" ) {
-      console.log("clicked on 4compliant");
-      $("#5compliant").closest(".question").slideDown();
-    } else if ( this.id == "5compliant" ) {
-      console.log("clicked on 5compliant");
       // Immediately show first question of first panel
       showPanel(2);
     }
 
       // PANEL-2
 
-    if ( this.id == "6acompliant" ) {
-      console.log("clicked on 6acompliant");
+    if ( this.id == "4acompliant" ) {
+      console.log("clicked on 4acompliant");
       $(event.target).closest(".question").next(".question").slideDown();
-    } else if ( this.id == "6bcompliant" ) {
-      console.log("clicked on 6bcompliant");
+    } else if ( this.id == "4bcompliant" ) {
+      console.log("clicked on 4bcompliant");
       $(event.target).closest(".question").next(".question").slideDown();
-    } else if ( this.id == "6ccompliant" ) {
-      console.log("clicked on 6ccompliant");
-      $(event.target).closest(".question").next(".question").slideDown();
-      // Add event listener on keyup in the text area
-      $("input[id=6danswer_text]").keyup(function(){
-        // If characterinput, show first question of third panel
-        console.log("text typed in 6danswer_text");
-        showPanel(3);
-      })
     }
 
       // PANEL-3
