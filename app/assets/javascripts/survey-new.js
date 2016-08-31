@@ -23,7 +23,7 @@ $(document).ready(function(){
 
   // Immediately show first question of first panel
   // showPanel(1);
-  showPanel(2);
+  showPanel(4);
 
   // Add event listener on the radio_button pair od the preliminary question
   // as to whether organization is a data processor at large scale
@@ -208,8 +208,130 @@ $(document).ready(function(){
 
       // PANEL-3
 
-    if ( this.id == "7compliant" ) {
-      console.log("clicked on 6acompliant");
+    if ( this.id == "5compliant" ) {
+      console.log("clicked on 5compliant");
+      $(event.target).closest(".question").next(".question").slideDown();
+    } else if ( this.id == "6compliant" ) {
+      console.log("clicked on 6compliant");
+      // Check if question 4e checked as 'yes'
+      if ( $("input[id=4ecompliant]:checked").val() == "true" ) {
+        console.log("question 4e checked as Yes");
+        $(event.target).closest(".question").next(".question").slideDown();
+      // Alse, question 4e checked as 'no'
+      } else {
+        console.log("question 4e checked as No");
+        // Slide down question 8
+        $("#8compliant").closest(".question").slideDown();
+      }
+    } else if ( this.id == "7compliant" ) {
+      console.log("clicked on 7compliant");
+      $(event.target).closest(".question").next(".question").slideDown();
+    } else if ( this.id == "7acompliant" ) {
+      console.log("clicked on 7acompliant");
+      $(event.target).closest(".question").next(".question").slideDown();
+    } else if ( this.id == "7bcompliant" ) {
+      console.log("clicked on 7bcompliant");
+      $(event.target).closest(".question").next(".question").slideDown();
+    } else if ( this.id == "8compliant" ) {
+      console.log("clicked on 8compliant");
+      $(event.target).closest(".question").next(".question").slideDown();
+    } else if ( this.id == "9compliant" ) {
+      console.log("clicked on 9compliant");
+      if ( $("input[id=9compliant]:checked").val() == "true" ) {
+        // If question 9 checked as 'Yes'
+        console.log("question 9 checked as Yes");
+        $(event.target).closest(".question").next(".question").slideDown();
+      // Else question 9 checked as 'No'
+      } else {
+        console.log("question 9 checked as No");
+        // Show first question of fourth panel
+        showPanel(4);
+        // Slide up question 9a
+        $("#9acompliant").closest(".question").slideUp();
+        // Setting 9a radio_buttons such as none of them are checked
+        // So to nullify any previously 'yes' or 'no' checked value in 9a
+        $("input[name*=31]").prop("checked", false);
+      }
+    } else if ( this.id == "9acompliant") {
+      // Show first question of fourth panel
+      showPanel(4);
+    }
+
+      // PANEL-4
+
+    if ( this.id == "10compliant" ) {
+      console.log("clicked on 10compliant");
+      if ( $("input[id=10compliant]:checked").val() == "true" ) {
+        // If question 10 checked as 'Yes'
+        console.log("question 10 checked as Yes");
+        // Show question 10a
+        $(event.target).closest(".question").next(".question").slideDown();
+      // Else question 9 checked as 'No'
+      } else {
+        console.log("question 10 checked as No");
+        // Slide down question 11
+        $("#11compliant").closest(".question").slideDown();
+        // Slide up question 9a
+        $("#10acompliant").closest(".question").slideUp();
+        // Setting 9a radio_buttons such as none of them are checked
+        // So to nullify any previously 'yes' or 'no' checked value in 9a
+        $("input[name*=31]").prop("checked", false);
+      }
+    } else if ( this.id == "10acompliant" ) {
+      console.log("clicked on 10acompliant");
+      $(event.target).closest(".question").next(".question").slideDown();
+    } else if ( this.id == "11compliant" ) {
+      console.log("clicked on 10acompliant");
+      if ( $("input[id=11compliant]:checked").val() == "true" ) {
+        // If question 11 checked as 'Yes'
+        console.log("question 11 checked as Yes");
+        // Slide down questions 11a, 11b and 11c
+        $("#11aanswer_text").closest(".question").slideDown();
+        $("#11bcompliant").closest(".question").slideDown();
+        $("#11ccompliant").closest(".question").slideDown();
+      // Else question 11 checked as 'No'
+      } else {
+        console.log("question 11 checked as No");
+        // Slide down question 12
+        $("#12compliant").closest(".question").slideDown();
+        // Slide up questions 11a, 11b and 11c
+        $("#11aanswer_text").closest(".question").slideUp();
+        $("#11bcompliant").closest(".question").slideUp();
+        $("#11ccompliant").closest(".question").slideUp();
+        // Setting 11a, 11b and 11c radio_buttons such as none of them are checked
+        // So to nullify any previously 'yes' or 'no' checked value in 11a, 11b and 11c
+        // TODO
+        // Show first question of fifth panel
+        showPanel(5);
+      }
+    } else if ( this.id == "11ccompliant" ) {
+      console.log("clicked on 11ccompliant");
+      // If question 11c checked as 'Yes'
+      if ( $("input[id=11ccompliant]:checked").val() == "true" ) {
+        console.log("question 11c checked as Yes");
+        // Show question 11c1
+        $(event.target).closest(".question").next(".question").slideDown();
+      // Else question 11c checked as 'No'
+      } else {
+        console.log("question 11c checked as No");
+        // Show first question of fifth panel
+        showPanel(5);
+        // Slide up question 11c1
+        $("#11c1answer_text").closest(".question").slideUp();
+      }
+    } else if ( this.id == "11c1answer_text") {
+      // Add event listener on keyup in the text area
+      $(event.target).closest("input").keyup(function(){
+        console.log("11c1answer_text filled in");
+        // Show first question of fifth panel
+        showPanel(5);
+      })
+    }
+
+     // PANEL-5
+
+    if ( this.id == "12compliant" ) {
+      console.log("clicked on 12compliant");
       $(event.target).closest(".question").next(".question").slideDown();
     }
 
