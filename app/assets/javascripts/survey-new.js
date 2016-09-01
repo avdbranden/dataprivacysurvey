@@ -24,13 +24,13 @@ $(document).ready(function(){
   console.log($(".question_input").length);
 
   // Start by:
-  // 1/ Immediately hide all the panel questions
+  // 1. Immediately hide all the panel questions
   $(".panel-questions").hide();
 
-  // 2/ Immediately show first question of first panel
-  showPanel(4);
+  // 2. Immediately show first question of first panel
+  showPanel(1);
 
-  // 3/ Add event listener on the radio_button pair od the preliminary question
+  // 3. Add event listener on the radio_button pair od the preliminary question
   // as to whether organization is a data processor at large scale
   $(".survey_data_processor").click(function(e){
     // Check if data_processor preliminary question checked as 'Yes'
@@ -53,10 +53,7 @@ $(document).ready(function(){
 
   })
 
-
-
-
-  // Add event listener on the radio_button pair of each question
+  // 4. Add event listener on the radio_button pair of each question
   $(".question_input").click(function(e){
 
       // PANEL-1
