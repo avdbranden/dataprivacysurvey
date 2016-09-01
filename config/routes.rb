@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :surveys, only: [:new, :create, :show]
 
   # Route to homepage
-  root to: 'pages#home'
+  root to: 'surveys#new'
 end

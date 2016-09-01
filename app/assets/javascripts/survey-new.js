@@ -28,7 +28,7 @@ $(document).ready(function(){
   $(".panel-questions").hide();
 
   // 2/ Immediately show first question of first panel
-  showPanel(1);
+  showPanel(2);
 
   // 3/ Add event listener on the radio_button pair od the preliminary question
   // as to whether organization is a data processor at large scale
@@ -38,6 +38,8 @@ $(document).ready(function(){
       console.log("data_processor radio_button activated as Yes");
       // Show question 1j
       $("#1jcompliant").closest(".question").show();
+      // Make response to question as 'required'
+      $("#1jrequiredness").val("required");
     } else {
       console.log("data_processor radio_button activated as No");
       // Hide question 1j
@@ -45,6 +47,8 @@ $(document).ready(function(){
       // Setting 1j radio_buttons such as none of them are checked
       // So to nullify any previously 'yes' or 'no' checked value in 1j
       $("input[name*=12]").prop("checked", false);
+      // Make response to question as 'required-when-activated'
+      $("#1jrequiredness").val("required-when-activated");
     }
 
   })
@@ -86,6 +90,8 @@ $(document).ready(function(){
         // Setting 1f2 radio_buttons such as none of them are checked
         // So to nullify any previously 'yes' or 'no' checked value in 1f2
         $("input[name*=8]").prop("checked", false);
+        // Make response to question as 'required-when-activated'
+        $("#1f2requiredness").val("required-when-activated");
       } else {
       // Check if 'Yes' radio_button not activated (i.e. 'No' is activated)
         console.log("1fcompliant radio_button activated as No");
@@ -93,6 +99,8 @@ $(document).ready(function(){
         $("#1f1answer_text").closest(".question").slideUp();
         // Slide down related indented question
         $("#1f2compliant").closest(".question").slideDown();
+        // Make response to question as 'required'
+        $("#1f2requiredness").val("required");
       }
     } else if ( this.id == "1f1answer_text") {
       // Add event listener on keyup in the text area
@@ -118,6 +126,8 @@ $(document).ready(function(){
         console.log("data_processor radio_button activated as Yes");
         // Slide down related indented question
         $(event.target).closest(".question").next(".question").slideDown();
+        // Make response to question as 'required'
+        $("#1jrequiredness").val("required");
       } else {
         // Slide down question 2
         console.log("data_processor radio_button activated as No");
@@ -167,6 +177,8 @@ $(document).ready(function(){
         // Setting 4g radio_buttons such as none of them are checked
         // So to nullify any previously 'yes' or 'no' checked value in 4g
         $("input[name*=23]").prop("checked", false);
+        // Make response to question as 'required-when-activated'
+        $("#4grequiredness").val("required-when-activated");
       }
     } else if ( this.id == "4dcompliant" ) {
       console.log("clicked on 4dcompliant");
@@ -178,6 +190,8 @@ $(document).ready(function(){
         // Setting 4g radio_buttons such as none of them are checked
         // So to nullify any previously 'yes' or 'no' checked value in 4g
         $("input[name*=23]").prop("checked", false);
+        // Make response to question as 'required-when-activated'
+        $("#4grequiredness").val("required-when-activated");
       }
     } else if ( this.id == "4ecompliant" ) {
       console.log("clicked on 4ecompliant");
@@ -189,6 +203,12 @@ $(document).ready(function(){
         // Setting 4g radio_buttons such as none of them are checked
         // So to nullify any previously 'yes' or 'no' checked value in 4g
         $("input[name*=23]").prop("checked", false);
+        // Make response to question as 'required-when-activated'
+        $("#4grequiredness").val("required-when-activated");
+        // Make response to question 7, 7a & 7b as 'required-when-activated'
+        $("#7requiredness").val("required-when-activated");
+        $("#7arequiredness").val("required-when-activated");
+        $("#7brequiredness").val("required-when-activated");
       }
     } else if ( this.id == "4fanswer_text") {
       // Add event listener on keyup in the text area
@@ -201,6 +221,8 @@ $(document).ready(function(){
           console.log("4c ==> true, 4d ==> true & 4e ==> false");
           // Slide down question 4g
           $("#4gcompliant").closest(".question").slideDown();
+          // Make response to question as 'required'
+          $("#4grequiredness").val("required");
         } else {
           // Show first question of third panel
           showPanel(3);
@@ -222,7 +244,11 @@ $(document).ready(function(){
       if ( $("input[id=4ecompliant]:checked").val() == "true" ) {
         console.log("question 4e checked as Yes");
         $(event.target).closest(".question").next(".question").slideDown();
-      // Alse, question 4e checked as 'no'
+        // Make response to question as 'required'
+        $("#7requiredness").val("required");
+        $("#7arequiredness").val("required");
+        $("#7brequiredness").val("required");
+      // Else, question 4e checked as 'no'
       } else {
         console.log("question 4e checked as No");
         // Slide down question 8
