@@ -24,13 +24,13 @@ $(document).ready(function(){
   console.log($(".question_input").length);
 
   // Start by:
-  // 1/ Immediately hide all the panel questions
+  // 1. Immediately hide all the panel questions
   $(".panel-questions").hide();
 
-  // 2/ Immediately show first question of first panel
+  // 2. Immediately show first question of first panel
   showPanel(1);
 
-  // 3/ Add event listener on the radio_button pair od the preliminary question
+  // 3. Add event listener on the radio_button pair od the preliminary question
   // as to whether organization is a data processor at large scale
   $(".survey_data_processor").click(function(e){
     // Check if data_processor preliminary question checked as 'Yes'
@@ -38,6 +38,8 @@ $(document).ready(function(){
       console.log("data_processor radio_button activated as Yes");
       // Show question 1j
       $("#1jcompliant").closest(".question").show();
+      // Make response to question as 'required'
+      $("#1jrequiredness").val("required");
     } else {
       console.log("data_processor radio_button activated as No");
       // Hide question 1j
@@ -45,14 +47,13 @@ $(document).ready(function(){
       // Setting 1j radio_buttons such as none of them are checked
       // So to nullify any previously 'yes' or 'no' checked value in 1j
       $("input[name*=12]").prop("checked", false);
+      // Make response to question as 'required-when-activated'
+      $("#1jrequiredness").val("required-when-activated");
     }
 
   })
 
-
-
-
-  // Add event listener on the radio_button pair of each question
+  // 4. Add event listener on the radio_button pair of each question
   $(".question_input").click(function(e){
 
       // PANEL-1
@@ -86,6 +87,8 @@ $(document).ready(function(){
         // Setting 1f2 radio_buttons such as none of them are checked
         // So to nullify any previously 'yes' or 'no' checked value in 1f2
         $("input[name*=8]").prop("checked", false);
+        // Make response to question as 'required-when-activated'
+        $("#1f2requiredness").val("required-when-activated");
       } else {
       // Check if 'Yes' radio_button not activated (i.e. 'No' is activated)
         console.log("1fcompliant radio_button activated as No");
@@ -93,6 +96,8 @@ $(document).ready(function(){
         $("#1f1answer_text").closest(".question").slideUp();
         // Slide down related indented question
         $("#1f2compliant").closest(".question").slideDown();
+        // Make response to question as 'required'
+        $("#1f2requiredness").val("required");
       }
     } else if ( this.id == "1f1answer_text") {
       // Add event listener on keyup in the text area
@@ -118,6 +123,8 @@ $(document).ready(function(){
         console.log("data_processor radio_button activated as Yes");
         // Slide down related indented question
         $(event.target).closest(".question").next(".question").slideDown();
+        // Make response to question as 'required'
+        $("#1jrequiredness").val("required");
       } else {
         // Slide down question 2
         console.log("data_processor radio_button activated as No");
@@ -167,6 +174,8 @@ $(document).ready(function(){
         // Setting 4g radio_buttons such as none of them are checked
         // So to nullify any previously 'yes' or 'no' checked value in 4g
         $("input[name*=23]").prop("checked", false);
+        // Make response to question as 'required-when-activated'
+        $("#4grequiredness").val("required-when-activated");
       }
     } else if ( this.id == "4dcompliant" ) {
       console.log("clicked on 4dcompliant");
@@ -178,6 +187,8 @@ $(document).ready(function(){
         // Setting 4g radio_buttons such as none of them are checked
         // So to nullify any previously 'yes' or 'no' checked value in 4g
         $("input[name*=23]").prop("checked", false);
+        // Make response to question as 'required-when-activated'
+        $("#4grequiredness").val("required-when-activated");
       }
     } else if ( this.id == "4ecompliant" ) {
       console.log("clicked on 4ecompliant");
@@ -189,6 +200,12 @@ $(document).ready(function(){
         // Setting 4g radio_buttons such as none of them are checked
         // So to nullify any previously 'yes' or 'no' checked value in 4g
         $("input[name*=23]").prop("checked", false);
+        // Make response to question as 'required-when-activated'
+        $("#4grequiredness").val("required-when-activated");
+        // Make response to question 7, 7a & 7b as 'required-when-activated'
+        $("#7requiredness").val("required-when-activated");
+        $("#7arequiredness").val("required-when-activated");
+        $("#7brequiredness").val("required-when-activated");
       }
     } else if ( this.id == "4fanswer_text") {
       // Add event listener on keyup in the text area
@@ -201,6 +218,8 @@ $(document).ready(function(){
           console.log("4c ==> true, 4d ==> true & 4e ==> false");
           // Slide down question 4g
           $("#4gcompliant").closest(".question").slideDown();
+          // Make response to question as 'required'
+          $("#4grequiredness").val("required");
         } else {
           // Show first question of third panel
           showPanel(3);
@@ -222,7 +241,11 @@ $(document).ready(function(){
       if ( $("input[id=4ecompliant]:checked").val() == "true" ) {
         console.log("question 4e checked as Yes");
         $(event.target).closest(".question").next(".question").slideDown();
-      // Alse, question 4e checked as 'no'
+        // Make response to question as 'required'
+        $("#7requiredness").val("required");
+        $("#7arequiredness").val("required");
+        $("#7brequiredness").val("required");
+      // Else, question 4e checked as 'no'
       } else {
         console.log("question 4e checked as No");
         // Slide down question 8
@@ -271,6 +294,8 @@ $(document).ready(function(){
         console.log("question 10 checked as Yes");
         // Show question 10a
         $(event.target).closest(".question").next(".question").slideDown();
+        // Make response to question as 'required'
+        $("#10arequiredness").val("required");
       // Else question 9 checked as 'No'
       } else {
         console.log("question 10 checked as No");
@@ -281,6 +306,8 @@ $(document).ready(function(){
         // Setting 9a radio_buttons such as none of them are checked
         // So to nullify any previously 'yes' or 'no' checked value in 9a
         $("input[name*=33]").prop("checked", false);
+        // Make response to question as 'required-when-activated'
+        $("#10arequiredness").val("required-when-activated");
       }
     } else if ( this.id == "10acompliant" ) {
       console.log("clicked on 10acompliant");
@@ -294,6 +321,11 @@ $(document).ready(function(){
         $("#11aanswer_text").closest(".question").slideDown();
         $("#11bcompliant").closest(".question").slideDown();
         $("#11ccompliant").closest(".question").slideDown();
+        // Make responses to questions 11b & 11c as 'required'
+        $("#11brequiredness").val("required");
+        $("#11crequiredness").val("required");
+        // Make response to question 13e as 'required'
+        $("#13erequiredness").val("required");
       // Else question 11 checked as 'No'
       } else {
         console.log("question 11 checked as No");
@@ -307,6 +339,11 @@ $(document).ready(function(){
         // So to nullify any previously 'yes' or 'no' checked value in 11a, 11b and 11c
         $("input[name*=36]").prop("checked", false);
         $("input[name*=37]").prop("checked", false);
+        // Make responses to questions 11b & 11c as 'required-when-activated'
+        $("#11brequiredness").val("required-when-activated");
+        $("#11crequiredness").val("required-when-activated");
+        // Make response to question 13e as 'required-when-activated'
+        $("#13erequiredness").val("required-when-activated");
         // Show first question of fifth panel
         showPanel(5);
       }
@@ -317,6 +354,8 @@ $(document).ready(function(){
         console.log("question 11c checked as Yes");
         // Show question 11c1
         $(event.target).closest(".question").next(".question").slideDown();
+        // Make response question 11c1 as 'required'
+        $("#11c1requiredness").val("required");
       // Else question 11c checked as 'No'
       } else {
         console.log("question 11c checked as No");
@@ -324,6 +363,8 @@ $(document).ready(function(){
         showPanel(5);
         // Slide up question 11c1
         $("#11c1answer_text").closest(".question").slideUp();
+        // Make response question 11c1 as 'required-when-activated'
+        $("#11c1requiredness").val("required-when-activated");
       }
     } else if ( this.id == "11c1answer_text") {
       // Add event listener on keyup in the text area
@@ -344,9 +385,12 @@ $(document).ready(function(){
         // Show question 12a & 12b
         $("#12acompliant").closest(".question").slideDown();
         $("#12bcompliant").closest(".question").slideDown();
+        // Make responses to questions 12a & 12b as 'required'
+        $("#12arequiredness").val("required");
+        $("#12brequiredness").val("required");
       // Else question 11c checked as 'No'
       } else {
-        console.log("question 11c checked as No");
+        console.log("question 12 checked as No");
         // Slide up question 11c1
         $("#12acompliant").closest(".question").slideUp();
         $("#12bcompliant").closest(".question").slideUp();
@@ -354,6 +398,9 @@ $(document).ready(function(){
         // So to nullify any previously 'yes' or 'no' checked value in 12a dn 12b
         $("input[name*=40]").prop("checked", false);
         $("input[name*=41]").prop("checked", false);
+        // Make responses to questions 12a & 12b as 'required-when-activated'
+        $("#12arequiredness").val("required-when-activated");
+        $("#12brequiredness").val("required-when-activated");
         // Show first question of sixth panel
         showPanel(6);
       }
