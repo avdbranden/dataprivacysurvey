@@ -720,8 +720,8 @@
                       explanation_text: nil,
                       requiredness: "required-when-activated" } %>
 
-                    <% # If 13c == yes, do not account for the below %>
-                    <% # If 13c == no, do not account for the above %>
+                    <% # If 11c == yes, do not account for the below %>
+                    <% # If 11c == no, do not account for the above %>
 
                     <%= render partial: "question",
                     locals: { a: a,
@@ -893,7 +893,7 @@
                     locals: { a: a,
                       counter: counter += 1,
                       question_number: "13e",
-                      question_text: "where applicable, the names of the third countries (i.e. countries outside of the EU) to which your organization is transfering personal data",
+                      question_text: "the names of the third countries (i.e. countries outside of the EU) to which your organization is transfering personal data",
                       hint: "",
                       questionstyle: "indent",
                       weighting_directive: 0,

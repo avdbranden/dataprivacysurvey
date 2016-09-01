@@ -28,7 +28,7 @@ $(document).ready(function(){
   $(".panel-questions").hide();
 
   // 2/ Immediately show first question of first panel
-  showPanel(2);
+  showPanel(4);
 
   // 3/ Add event listener on the radio_button pair od the preliminary question
   // as to whether organization is a data processor at large scale
@@ -297,6 +297,8 @@ $(document).ready(function(){
         console.log("question 10 checked as Yes");
         // Show question 10a
         $(event.target).closest(".question").next(".question").slideDown();
+        // Make response to question as 'required'
+        $("#10arequiredness").val("required");
       // Else question 9 checked as 'No'
       } else {
         console.log("question 10 checked as No");
@@ -307,6 +309,8 @@ $(document).ready(function(){
         // Setting 9a radio_buttons such as none of them are checked
         // So to nullify any previously 'yes' or 'no' checked value in 9a
         $("input[name*=33]").prop("checked", false);
+        // Make response to question as 'required-when-activated'
+        $("#10arequiredness").val("required-when-activated");
       }
     } else if ( this.id == "10acompliant" ) {
       console.log("clicked on 10acompliant");
@@ -320,6 +324,11 @@ $(document).ready(function(){
         $("#11aanswer_text").closest(".question").slideDown();
         $("#11bcompliant").closest(".question").slideDown();
         $("#11ccompliant").closest(".question").slideDown();
+        // Make responses to questions 11b & 11c as 'required'
+        $("#11brequiredness").val("required");
+        $("#11crequiredness").val("required");
+        // Make response to question 13e as 'required'
+        $("#13erequiredness").val("required");
       // Else question 11 checked as 'No'
       } else {
         console.log("question 11 checked as No");
@@ -333,6 +342,11 @@ $(document).ready(function(){
         // So to nullify any previously 'yes' or 'no' checked value in 11a, 11b and 11c
         $("input[name*=36]").prop("checked", false);
         $("input[name*=37]").prop("checked", false);
+        // Make responses to questions 11b & 11c as 'required-when-activated'
+        $("#11brequiredness").val("required-when-activated");
+        $("#11crequiredness").val("required-when-activated");
+        // Make response to question 13e as 'required-when-activated'
+        $("#13erequiredness").val("required-when-activated");
         // Show first question of fifth panel
         showPanel(5);
       }
@@ -343,6 +357,8 @@ $(document).ready(function(){
         console.log("question 11c checked as Yes");
         // Show question 11c1
         $(event.target).closest(".question").next(".question").slideDown();
+        // Make response question 11c1 as 'required'
+        $("#11c1requiredness").val("required");
       // Else question 11c checked as 'No'
       } else {
         console.log("question 11c checked as No");
@@ -350,6 +366,8 @@ $(document).ready(function(){
         showPanel(5);
         // Slide up question 11c1
         $("#11c1answer_text").closest(".question").slideUp();
+        // Make response question 11c1 as 'required-when-activated'
+        $("#11c1requiredness").val("required-when-activated");
       }
     } else if ( this.id == "11c1answer_text") {
       // Add event listener on keyup in the text area
@@ -370,9 +388,12 @@ $(document).ready(function(){
         // Show question 12a & 12b
         $("#12acompliant").closest(".question").slideDown();
         $("#12bcompliant").closest(".question").slideDown();
+        // Make responses to questions 12a & 12b as 'required'
+        $("#12arequiredness").val("required");
+        $("#12brequiredness").val("required");
       // Else question 11c checked as 'No'
       } else {
-        console.log("question 11c checked as No");
+        console.log("question 12 checked as No");
         // Slide up question 11c1
         $("#12acompliant").closest(".question").slideUp();
         $("#12bcompliant").closest(".question").slideUp();
@@ -380,6 +401,9 @@ $(document).ready(function(){
         // So to nullify any previously 'yes' or 'no' checked value in 12a dn 12b
         $("input[name*=40]").prop("checked", false);
         $("input[name*=41]").prop("checked", false);
+        // Make responses to questions 12a & 12b as 'required-when-activated'
+        $("#12arequiredness").val("required-when-activated");
+        $("#12brequiredness").val("required-when-activated");
         // Show first question of sixth panel
         showPanel(6);
       }
