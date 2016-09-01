@@ -13,19 +13,24 @@ function showPanel(panel_number) {
   $(panel_id + " .question:first").show();
 }
 
+function showNextQuestion(id) {
+  console.log(id);
+  $(event.target).closest(".question").next(".question").slideDown();
+}
+
 $(document).ready(function(){
 
 // Console.logs remain in place for debugging purposes
   console.log($(".question_input").length);
 
-  // Immediately hide all the panel questions
+  // Start by:
+  // 1/ Immediately hide all the panel questions
   $(".panel-questions").hide();
 
-  // Immediately show first question of first panel
-  // showPanel(1);
-  showPanel(4);
+  // 2/ Immediately show first question of first panel
+  showPanel(1);
 
-  // Add event listener on the radio_button pair od the preliminary question
+  // 3/ Add event listener on the radio_button pair od the preliminary question
   // as to whether organization is a data processor at large scale
   $(".survey_data_processor").click(function(e){
     // Check if data_processor preliminary question checked as 'Yes'
@@ -300,7 +305,8 @@ $(document).ready(function(){
         $("#11ccompliant").closest(".question").slideUp();
         // Setting 11a, 11b and 11c radio_buttons such as none of them are checked
         // So to nullify any previously 'yes' or 'no' checked value in 11a, 11b and 11c
-        // TODO
+        $("input[name*=36]").prop("checked", false);
+        $("input[name*=37]").prop("checked", false);
         // Show first question of fifth panel
         showPanel(5);
       }
@@ -332,7 +338,58 @@ $(document).ready(function(){
 
     if ( this.id == "12compliant" ) {
       console.log("clicked on 12compliant");
-      $(event.target).closest(".question").next(".question").slideDown();
+      // If question 12 checked as 'Yes'
+      if ( $("input[id=12ccompliant]:checked").val() == "true" ) {
+        console.log("question 12 checked as Yes");
+        // Show question 12a & 12b
+        $("#12acompliant").closest(".question").slideDown();
+        $("#12bcompliant").closest(".question").slideDown();
+      // Else question 11c checked as 'No'
+      } else {
+        console.log("question 11c checked as No");
+        // Slide up question 11c1
+        $("#12acompliant").closest(".question").slideUp();
+        $("#12bcompliant").closest(".question").slideUp();
+        // Setting 12a and 12b radio_buttons such as none of them are checked
+        // So to nullify any previously 'yes' or 'no' checked value in 12a dn 12b
+        $("input[name*=40]").prop("checked", false);
+        $("input[name*=41]").prop("checked", false);
+        // Show first question of sixth panel
+        showPanel(6);
+      }
+    } else if ( this.id == "12bcompliant") {
+      // Show first question of sixth panel
+      showPanel(6);
+    }
+
+      // PANEL-6
+
+    if ( this.id == "13acompliant" ) {
+      showNextQuestion(this.id);
+    } else if ( this.id == "13bcompliant" ) {
+      showNextQuestion(this.id);
+    } else if ( this.id == "13ccompliant" ) {
+      showNextQuestion(this.id);
+    } else if ( this.id == "13dcompliant" ) {
+      showNextQuestion(this.id);
+    } else if ( this.id == "13ecompliant" ) {
+      showNextQuestion(this.id);
+    } else if ( this.id == "13fcompliant" ) {
+      showNextQuestion(this.id);
+    } else if ( this.id == "13gcompliant" ) {
+      // Show first question of seventh panel
+      showPanel(7);
+    }
+
+      // PANEL-7
+
+    if ( this.id == "14compliant" ) {
+      showNextQuestion(this.id);
+    } else if ( this.id == "15compliant" ) {
+      showNextQuestion(this.id);
+    } else if ( this.id == "16compliant" ) {
+      // Survey complete
+      console.log("survey complete");
     }
 
 //
