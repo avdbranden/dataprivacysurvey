@@ -1,12 +1,18 @@
+<!-- Title Start -->
+
 <div id="rapport-title">
   <div class="container text-center">
     <div class="row">
       <div class="col-xs-12 col-md-10 col-md-offset-1">
-        <h1>Compliance Rapport</h1>
+        <h1>Compliance Report</h1>
       </div> <!-- .cols-xs-12 col-md-10 col-md-offset-1 -->
     </div> <!-- .row -->
   </div> <!-- .container -->
 </div> <!-- #rapport-title -->
+
+<!-- Title End -->
+
+<!-- Resume Start -->
 
 <div id="rapport-resume">
   <div class="container text-center">
@@ -51,34 +57,26 @@
   </div> <!-- .container -->
 </div> <!-- #rapport-resume -->
 
-<div id="rapport-answers">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <% @survey.answers.all.each do |answer| %>
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12 col-md-8 col-md-offset-2">
-                <div class="answer">
-                  <% if answer.compliant == true %>
-                    <div class="panel">
-                      <div class="panel-heading good_answer">
-                        <h4><%= answer.good_answer_text %></h4>
-                      </div>
-                    </div>
-                  <% elsif answer.compliant == false %>
-                    <div class="panel">
-                      <div class="panel-heading bad_answer">
-                        <h4><%= answer.bad_answer_text %></h4>
-                      </div>
-                    </div>
-                  <% end %>
-                </div> <!-- .answer -->
-              </div>
-            </div>
+<!-- Resume End -->
+
+<!-- Thank you Start -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <div class="text-center" id="thank-you-box">
+        <div class="panel">
+          <div class="panel-heading">
+            <h1>Thank you very much for filling out the survey!</h1>
           </div>
-        <% end%> <!-- @survey.answers-->
-      </div> <!-- .col-xs-12 -->
-    </div> <!-- .row -->
-  </div> <!-- .container -->
-</div> <!-- #rapport-answers -->
+          <div class="panel-body">
+            <h3>If you want be in touch please contact us at <strong>sample@test.com</strong></h3>
+            <p>Please note that the compliance levels above are for indicative purposes only. The answers to the questions are anonymized and will be used for statistical purposes only.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- #rapport-resume -->
+
+<!-- Thank you End -->

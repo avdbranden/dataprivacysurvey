@@ -280,7 +280,7 @@ $(document).ready(function(){
         $("#10acompliant").closest(".question").slideUp();
         // Setting 9a radio_buttons such as none of them are checked
         // So to nullify any previously 'yes' or 'no' checked value in 9a
-        $("input[name*=31]").prop("checked", false);
+        $("input[name*=33]").prop("checked", false);
       }
     } else if ( this.id == "10acompliant" ) {
       console.log("clicked on 10acompliant");
@@ -339,7 +339,7 @@ $(document).ready(function(){
     if ( this.id == "12compliant" ) {
       console.log("clicked on 12compliant");
       // If question 12 checked as 'Yes'
-      if ( $("input[id=12ccompliant]:checked").val() == "true" ) {
+      if ( $("input[id=12compliant]:checked").val() == "true" ) {
         console.log("question 12 checked as Yes");
         // Show question 12a & 12b
         $("#12acompliant").closest(".question").slideDown();
