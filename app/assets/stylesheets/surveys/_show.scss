@@ -53,3 +53,14 @@
     background-color: $red;
   }
 }
+
+#thank-you-box {
+  .panel {
+    padding: 5px;
+    .panel-heading {
+      background-color: $green;
+    }
+  } p {
+    margin-top: 25px;
+  }
+}

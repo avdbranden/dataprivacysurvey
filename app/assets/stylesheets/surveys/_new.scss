@@ -16,13 +16,14 @@
 }
 
 #submit-btn {
-  border: 2px solid #57476d;
   padding: 12px;
   margin-top: 70px;
   margin-bottom: 60px;
   input {
     background-color: $purple;
     color: white;
+    padding: 25px;
+    font-size: 26px;
   }
 }
 
